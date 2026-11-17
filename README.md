@@ -26,12 +26,19 @@ LoRa airtime), chain A - R - B, LONG_FAST, 4 KB, 5 runs per case:
   messages (125 s);
 - 20 % loss: **5 out of 5** (127 s), against 0 out of 5 (133 s).
 
+With **bursty losses** (20 % per link as outages of 15 s on average, same bench, 5 runs per case): **5 out of 5**
+(113 s of airtime), against 1 out of 5 with acked messages, which also reported 3.2 false successes per run. A
+Cauchy code with 3 parity chunks per group also delivered 5 out of 5, in the same time, with 11 % more airtime. In
+simulation, what failed under long outages was the number of resends, not the parity: it is now 20 (was 10), and
+the protocol delivered 100 % in all burst cases. Details: [`SPEC.md`](SPEC.md) §8.
+
 **Not yet tested on real radios.** Two Heltec V4 boards are on order; results will be added here.
 
 ## Contents
 
 - [`prototype/`](prototype/): reference implementation in Python (`protocole.py`, `raid6.py`), an in-memory
-  simulation of a lossy link (`simulation.py`) and tests.
+  simulation of a lossy link with independent or bursty losses (`simulation.py`), the burst study (`rafales.py`
+  and its results), an experimental Cauchy parity code (`cauchy.py`, off by default) and tests.
 - [`cpp/`](cpp/): C++ port of the same protocol, written for the Meshtastic firmware, and a test that replays the
   Python reference frame by frame (same bytes, same times, same budget results, same parity).
 - [`outils/`](outils/): LoRa airtime per preset (`temps-antenne.py`, from `src/mesh/MeshRadio.h:216` and Semtech's
@@ -46,6 +53,7 @@ our study notes (`docs/NN`, `essais/…`), which are not published here; what th
 ```sh
 python3 -m unittest discover prototype/tests          # Python reference (11 tests)
 python3 prototype/simulation.py                       # simulation: acked messages vs. this protocol
+python3 prototype/rafales.py                          # bursty losses: parity, Cauchy, interleaving (about 1 min)
 python3 outils/vecteurs-protocole.py                  # regenerate cpp/test/vecteurs.h from the Python reference
 g++ -std=c++17 -Icpp cpp/Protocole.cpp cpp/Raid6.cpp cpp/test/test_main.cpp -o test_cpp && ./test_cpp
 ```

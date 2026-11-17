@@ -1286,6 +1286,19 @@ static const Ligne journal_tres_pertes_echec[] = {
     {0x1.4000000000000p+7, 'E', 15, 0x696DC0F9u, true},
     {0x1.6800000000000p+7, 'E', 15, 0x696DC0F9u, true},
     {0x1.9000000000000p+7, 'E', 15, 0x696DC0F9u, true},
+    {0x1.b800000000000p+7, 'E', 15, 0x696DC0F9u, true},
+    {0x1.e000000000000p+7, 'E', 15, 0x696DC0F9u, true},
+    {0x1.0400000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.1800000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.2c00000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.4000000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.5400000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.6800000000000p+8, 'E', 15, 0x696DC0F9u, false},
+    {0x1.6900000000000p+8, 'R', 4, 0x8A8F7DA0u, true},
+    {0x1.7c00000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.7d00000000000p+8, 'R', 4, 0x8A8F7DA0u, true},
+    {0x1.9000000000000p+8, 'E', 15, 0x696DC0F9u, true},
+    {0x1.9100000000000p+8, 'R', 4, 0x8A8F7DA0u, true},
 };
 static const int parites_tres_pertes_echec[] = {0};
 static const Ligne journal_adaptatif_sans_perte_60k[] = {
@@ -3117,7 +3130,7 @@ static const Scenario scenarios[] = {
     {"coupure_reprise", 30000, 10, 215, 100, 100, 41, 0x1.c200000000000p+11, -1, 0x0.0p+0, false, 0x00000000u, 0x1.4000000000000p+2, false, true, false, true, 0x1.6000000000000p+3, 0x2E35FD35u, 8, journal_coupure_reprise, 205, parites_coupure_reprise, 10},
     {"coupure_autre_recepteur", 30000, 11, 215, 100, 100, 43, 0x1.c200000000000p+11, -1, 0x0.0p+0, false, 0x00000000u, 0x1.4000000000000p+2, true, true, false, true, 0x1.4000000000000p+5, 0xFAA99559u, 1, journal_coupure_autre_recepteur, 228, parites_coupure_autre_recepteur, 10},
     {"gros_60k", 61440, 12, 215, 150, 150, 47, 0x1.c200000000000p+12, -1, 0x0.0p+0, false, 0x00000000u, 0x0.0p+0, false, true, false, true, 0x1.7000000000000p+4, 0x61178767u, 0, journal_gros_60k, 371, parites_gros_60k, 36},
-    {"tres_pertes_echec", 4096, 13, 215, 950, 950, 53, 0x1.c200000000000p+11, -1, 0x0.0p+0, false, 0x00000000u, 0x0.0p+0, false, false, true, false, 0x1.b800000000000p+7, 0x00000000u, 0, journal_tres_pertes_echec, 11, parites_tres_pertes_echec, 0},
+    {"tres_pertes_echec", 4096, 13, 215, 950, 950, 53, 0x1.c200000000000p+11, -1, 0x0.0p+0, false, 0x00000000u, 0x0.0p+0, false, false, true, false, 0x1.a400000000000p+8, 0x00000000u, 0, journal_tres_pertes_echec, 24, parites_tres_pertes_echec, 0},
     {"adaptatif_sans_perte_60k", 61440, 14, 215, 0, 0, 59, 0x1.c200000000000p+12, -1, 0x0.0p+0, false, 0x00000000u, 0x0.0p+0, false, true, false, true, 0x1.2000000000000p+4, 0x1D1ACDAEu, 0, journal_adaptatif_sans_perte_60k, 305, parites_adaptatif_sans_perte_60k, 36},
     {"adaptatif_pertes_4_60k", 61440, 15, 215, 40, 40, 61, 0x1.c200000000000p+12, -1, 0x0.0p+0, false, 0x00000000u, 0x0.0p+0, false, true, false, true, 0x1.9000000000000p+4, 0x9B938DDFu, 0, journal_adaptatif_pertes_4_60k, 336, parites_adaptatif_pertes_4_60k, 36},
     {"adaptatif_pertes_7_60k", 61440, 16, 215, 72, 72, 67, 0x1.c200000000000p+12, -1, 0x0.0p+0, false, 0x00000000u, 0x0.0p+0, false, true, false, true, 0x1.1000000000000p+5, 0xDA69D0C2u, 0, journal_adaptatif_pertes_7_60k, 368, parites_adaptatif_pertes_7_60k, 36},

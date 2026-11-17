@@ -2,7 +2,7 @@
 """Protocole de transfert de contenus volumineux (docs/07 : P1, P9, P10) — prototype côté client.
 
 Règles (version 7, 5 novembre 2026 ; v7 = reprise d'un contenu déjà commencé, reconnu par son empreinte ; v6 = bilan dès qu'un renvoi complète le contenu, relance à 2,5 fois
-l'aller-retour, 10 relances ; v3 = renvoi des seuls morceaux manquants ; v4 = fin sur silence, délai de
+l'aller-retour, 10 relances (20 depuis le 17 nov. 2026) ; v3 = renvoi des seuls morceaux manquants ; v4 = fin sur silence, délai de
 relance mesuré, parité de départ selon l'en-tête ; v5 = budget d'émission (classe Budget), renvoi limité aux lots
 déjà envoyés) :
 - un EN-TÊTE donne toutes les infos du message (idée de l'utilisateur, P10) et attend une réponse PRÊT ;
@@ -46,6 +46,7 @@ import struct, zlib
 from collections import deque
 
 from raid6 import parite, reconstruire
+import cauchy
 
 LOT, FENETRE, AVANCE = 8, 4, 2          # morceaux par lot, lots par fenêtre, fenêtres d'avance
 # Taille maximale d'une trame (5 nov. 2026, vu sur le banc : TOO_LARGE) : entre deux nœuds qui connaissent leurs clés,
@@ -58,6 +59,9 @@ UTILE_COMPACT = TRAME_MAX - 4           # 4 octets d'en-tête de MORCEAU : type,
 UTILE_OFFICIEL = 216                    # ChunkedPayload, champs au pire (docs/05)
 ENTETE, PRET, MORCEAU, BILAN, QUESTION = 1, 2, 3, 4, 5
 DERNIER, PARITE = 0x8000, 0x4000
+# Octet « réservé » de l'EN-TÊTE (17 nov. 2026, ESSAI du prototype, pas dans le firmware) : bit 0 = parité par code de
+# Cauchy (cauchy.py, jusqu'à 4 parités ; numéro d'une parité = lot << 2 | j). 0 = RAID 6, trames inchangées.
+CODE_CAUCHY = 0x01
 FACTEUR_RELANCE = 2.5                   # délai de relance = FACTEUR x aller-retour EN-TÊTE / PRÊT, borné à 15-60 s
                                         # (4 en v4 : 37 s sur deux sauts du banc, chaque trame de contrôle perdue coûtait cela)
 
@@ -83,17 +87,33 @@ def parite_pour(pertes):
     return 0 if pertes < 0.02 else 1 if pertes < 0.07 else 2
 
 
+def parite_pour_cauchy(pertes):
+    """Essai du 17 nov. 2026 : même règle que parite_pour, prolongée jusqu'à 4 parités (seuils par extension, non
+    optimisés)."""
+    if pertes is None:
+        return 1
+    return 0 if pertes < 0.02 else 1 if pertes < 0.07 else 2 if pertes < 0.15 else 3 if pertes < 0.25 else 4
+
+
 class Emetteur:
-    def __init__(self, ident, donnees, utile=UTILE_COMPACT, parites="auto", delai_relance=None, relances_max=10,
-                 final=None):
+    def __init__(self, ident, donnees, utile=UTILE_COMPACT, parites="auto", delai_relance=None, relances_max=20,
+                 final=None, code="raid6", entrelacer=False):
+        # code, entrelacer (17 nov. 2026, ESSAI du prototype, pas dans le firmware) : « cauchy » = jusqu'à 4 parités
+        # par lot (cauchy.py) ; entrelacer = trames d'une fenêtre envoyées lot par lot à tour de rôle (morceau 0 des
+        # 4 lots, puis morceau 1…) pour qu'une rafale de pertes touche plusieurs lots un peu plutôt qu'un seul beaucoup.
         # final : numéro du destinataire final quand on passe par une station (docs/10 §4) ; ajouté à l'EN-TÊTE
         # 10 relances (6 en v4) : à 30 % de pertes par sens, un aller-retour échoue une fois sur deux et 6 échecs de
         # suite faisaient abandonner 1 transfert sur 40 alors que le récepteur répondait (simulation, 4 nov. 2026).
+        # 20 relances (17 nov. 2026, son choix après essai de 15) : avec des pertes en rafale (prototype/rafales.py),
+        # 10 relances abandonnaient jusqu'à 1 transfert sur 8, 15 jusqu'à 1 sur 20, 20 aucun (162 cas x 40 tirages).
         utile = utile_pour(len(donnees), utile)       # `utile` : taille maximale d'un morceau
         self.id, self.donnees, self.utile, self.final = ident, donnees, utile, final
         self.fixe = None if parites == "auto" else parites
         self.morceaux = decouper(donnees, utile)
         self.lots = [self.morceaux[i:i + LOT] for i in range(0, len(self.morceaux), LOT)]
+        if code not in ("raid6", "cauchy") or (code == "cauchy" and len(self.lots) > 0x3FFF >> 2):
+            raise ValueError("code de parité inconnu, ou trop de lots pour le numérotage de Cauchy")
+        self.code, self.entrelacer = code, entrelacer
         # délai de relance : fixé par l'appelant, sinon mesuré sur l'aller-retour EN-TÊTE / PRÊT (60 s en attendant)
         self.delai_fixe, self.delai, self.relances_max = delai_relance, delai_relance or 20.0, relances_max
         self.debut, self.entete_relancee = None, False
@@ -109,11 +129,11 @@ class Emetteur:
             return self.fixe
         if self.pertes is None:                       # pas encore de bilan : d'après l'échange d'en-tête
             return 2 if self.entete_relancee else 1
-        return parite_pour(self.pertes)
+        return (parite_pour_cauchy if self.code == "cauchy" else parite_pour)(self.pertes)
 
     def trame_entete(self):
-        trame = struct.pack(">BBIHBBIB", ENTETE, self.id, len(self.donnees), len(self.morceaux), LOT, 0,
-                            zlib.crc32(self.donnees), self.utile)
+        trame = struct.pack(">BBIHBBIB", ENTETE, self.id, len(self.donnees), len(self.morceaux), LOT,
+                            CODE_CAUCHY if self.code == "cauchy" else 0, zlib.crc32(self.donnees), self.utile)
         return trame + (struct.pack(">I", self.final) if self.final is not None else b"")
 
     def trames_lot(self, n):
@@ -121,7 +141,10 @@ class Emetteur:
         for k, m in enumerate(lot):
             num = n * LOT + k
             trames.append(struct.pack(">BBH", MORCEAU, self.id, num | (DERNIER if num == len(self.morceaux) - 1 else 0)) + m)
-        if k_par and len(lot) > 1:
+        if k_par and len(lot) > 1 and self.code == "cauchy":
+            for j, x in enumerate(cauchy.parites(lot, k_par)):
+                trames.append(struct.pack(">BBH", MORCEAU, self.id, PARITE | (n << 2) | j) + x)
+        elif k_par and len(lot) > 1:
             p, q = parite(lot)
             for j, x in enumerate((p, q)[:k_par]):
                 trames.append(struct.pack(">BBH", MORCEAU, self.id, PARITE | (n << 1) | j) + x)
@@ -129,18 +152,20 @@ class Emetteur:
         return trames
 
     def fenetre(self):
-        sortie, lots = [], 0
+        par_lot, lots = [], 0
         while lots < FENETRE and self.prochain_lot < len(self.lots):
             n = self.prochain_lot
             self.prochain_lot += 1
             if n in self.deja:                         # reprise : le récepteur a déjà une partie de ce lot (v7)
                 if self.deja[n]:                       # 0 = lot complet chez lui : rien à envoyer, ne compte pas
-                    sortie += self.trames_manquants(n, self.deja[n])
+                    par_lot.append(self.trames_manquants(n, self.deja[n]))
                     lots += 1
                 continue
-            sortie += self.trames_lot(n)
+            par_lot.append(self.trames_lot(n))
             lots += 1
-        return sortie
+        if not self.entrelacer:
+            return [t for trames in par_lot for t in trames]
+        return [trames[k] for k in range(max(map(len, par_lot), default=0)) for trames in par_lot if k < len(trames)]
 
     def demarrer(self, maintenant):
         self.attente_depuis = self.debut = maintenant
@@ -271,7 +296,7 @@ class Recepteur:
     def recevoir(self, trame, maintenant):
         t, ident = trame[0], trame[1]
         if t == ENTETE:
-            _, _, taille, nb, lot, _, crc, utile = struct.unpack(">BBIHBBIB", trame[:15])
+            _, _, taille, nb, lot, reserve, crc, utile = struct.unpack(">BBIHBBIB", trame[:15])
             empreinte = (crc, taille, utile)
             self.finals[ident] = struct.unpack(">I", trame[15:19])[0] if len(trame) >= 19 else None
             if self.accepter is not None and empreinte not in self.livres_par_empreinte and \
@@ -290,6 +315,7 @@ class Recepteur:
                           "morceaux": {}, "bruts": set(), "par": {}, "fin_vue": False, "plus_haut": -1,
                           "derniere": None, "ecarts": [], "bilan_du": None, "complets": set(), "prets": 0}
                 self.transferts[ident] = tr
+            tr["cauchy"] = bool(reserve & CODE_CAUCHY)        # essai du 17 nov. 2026 (cauchy.py)
             tr["pret_a"], tr["prets"], tr["actif"] = maintenant, tr["prets"] + 1, False
             if empreinte in self.livres_par_empreinte:        # déjà tout reçu : rien à envoyer, bilan final direct
                 self.livres[ident] = self.livres_par_empreinte[empreinte]
@@ -305,8 +331,8 @@ class Recepteur:
             num = struct.unpack(">H", trame[2:4])[0]
             dernier_lot = -(-tr["nb"] // tr["lot"]) - 1
             if num & PARITE and not num & DERNIER:
-                n = (num & 0x3FFF) >> 1
-                tr["par"][n, num & 1] = trame[4:]
+                n, j = ((num & 0x3FFF) >> 2, num & 3) if tr.get("cauchy") else ((num & 0x3FFF) >> 1, num & 1)
+                tr["par"][n, j] = trame[4:]
                 self.noter_arrivee(tr, maintenant, n == dernier_lot)
                 return []
             i = num & 0x7FFF
@@ -341,7 +367,11 @@ class Recepteur:
         longueurs = {i - debut: (tr["taille"] - i * tr["utile"] if i == tr["nb"] - 1 else tr["utile"])
                      for i in range(debut, fin)}
         try:
-            complet = reconstruire(recus, fin - debut, tr["par"].get((n, 0)), tr["par"].get((n, 1)), longueurs)
+            if tr.get("cauchy"):
+                pars = {j: tr["par"][n, j] for j in range(cauchy.PARITE_MAX) if (n, j) in tr["par"]}
+                complet = cauchy.reconstruire(recus, fin - debut, pars, longueurs)
+            else:
+                complet = reconstruire(recus, fin - debut, tr["par"].get((n, 0)), tr["par"].get((n, 1)), longueurs)
         except ValueError:
             return False
         for k, m in enumerate(complet):

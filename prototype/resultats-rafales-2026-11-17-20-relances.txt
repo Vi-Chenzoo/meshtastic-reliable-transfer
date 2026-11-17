@@ -1,0 +1,404 @@
+Pertes en rafale, simulation.py, LONG_FAST, un saut, 40 tirages par case, 20 relances (17/11/2026 02:07)
+Format : livré % | antenne s | durée s | morceaux renvoyés | pertes vues %
+
+4 Ko, pertes 10%, indépendantes
+  messages avec accusé   livré 100.0 % | antenne     57 s | durée    110 s | renvoyés   0.0 | pertes vues  9.7 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     51 s | durée     70 s | renvoyés   1.1 | pertes vues 10.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     53 s | durée     72 s | renvoyés   2.4 | pertes vues 10.0 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     51 s | durée     70 s | renvoyés   1.1 | pertes vues 10.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     53 s | durée     72 s | renvoyés   2.4 | pertes vues 10.0 %
+4 Ko, pertes 10%, rafales de 5 s
+  messages avec accusé   livré 100.0 % | antenne     51 s | durée     73 s | renvoyés   0.0 | pertes vues  3.7 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     52 s | durée     71 s | renvoyés   2.0 | pertes vues  8.8 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     55 s | durée     69 s | renvoyés   3.5 | pertes vues  8.2 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     52 s | durée     71 s | renvoyés   2.0 | pertes vues  8.8 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     55 s | durée     69 s | renvoyés   3.5 | pertes vues  8.2 %
+4 Ko, pertes 10%, rafales de 15 s
+  messages avec accusé   livré  95.0 % | antenne     49 s | durée     64 s | renvoyés   0.0 | pertes vues  2.1 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     50 s | durée     63 s | renvoyés   1.1 | pertes vues  5.1 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     51 s | durée     62 s | renvoyés   1.8 | pertes vues  5.0 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     50 s | durée     63 s | renvoyés   1.1 | pertes vues  5.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     51 s | durée     62 s | renvoyés   1.8 | pertes vues  5.0 %
+4 Ko, pertes 10%, rafales de 45 s
+  messages avec accusé   livré  87.5 % | antenne     50 s | durée     70 s | renvoyés   0.0 | pertes vues  3.0 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     49 s | durée     68 s | renvoyés   0.8 | pertes vues  3.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     50 s | durée     69 s | renvoyés   1.1 | pertes vues  3.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     49 s | durée     68 s | renvoyés   0.8 | pertes vues  3.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     50 s | durée     69 s | renvoyés   1.1 | pertes vues  3.7 %
+
+4 Ko, pertes 20%, indépendantes
+  messages avec accusé   livré  90.0 % | antenne     71 s | durée    191 s | renvoyés   0.0 | pertes vues 19.7 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     56 s | durée     95 s | renvoyés   2.8 | pertes vues 19.3 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     63 s | durée     97 s | renvoyés   6.0 | pertes vues 19.5 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     56 s | durée     95 s | renvoyés   2.8 | pertes vues 19.3 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     63 s | durée     97 s | renvoyés   6.0 | pertes vues 19.5 %
+4 Ko, pertes 20%, rafales de 5 s
+  messages avec accusé   livré  97.5 % | antenne     55 s | durée    101 s | renvoyés   0.0 | pertes vues  8.2 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     57 s | durée     86 s | renvoyés   3.8 | pertes vues 15.4 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     64 s | durée     88 s | renvoyés   7.1 | pertes vues 16.0 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     57 s | durée     86 s | renvoyés   3.8 | pertes vues 15.4 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     64 s | durée     88 s | renvoyés   7.1 | pertes vues 16.0 %
+4 Ko, pertes 20%, rafales de 15 s
+  messages avec accusé   livré  92.5 % | antenne     52 s | durée     80 s | renvoyés   0.0 | pertes vues  4.8 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     54 s | durée     80 s | renvoyés   2.9 | pertes vues 11.5 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     55 s | durée     75 s | renvoyés   3.1 | pertes vues 11.1 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     54 s | durée     80 s | renvoyés   2.9 | pertes vues 11.5 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     55 s | durée     75 s | renvoyés   3.1 | pertes vues 11.1 %
+4 Ko, pertes 20%, rafales de 45 s
+  messages avec accusé   livré  85.0 % | antenne     51 s | durée     79 s | renvoyés   0.0 | pertes vues  4.4 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     51 s | durée     82 s | renvoyés   1.1 | pertes vues  5.9 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     52 s | durée     81 s | renvoyés   1.7 | pertes vues  6.2 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     51 s | durée     82 s | renvoyés   1.1 | pertes vues  5.9 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     52 s | durée     81 s | renvoyés   1.7 | pertes vues  6.2 %
+
+4 Ko, pertes 30%, indépendantes
+  messages avec accusé   livré  52.5 % | antenne     88 s | durée    298 s | renvoyés   0.0 | pertes vues 29.8 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     65 s | durée    131 s | renvoyés   6.2 | pertes vues 30.1 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     74 s | durée    126 s | renvoyés  10.3 | pertes vues 29.8 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     65 s | durée    131 s | renvoyés   6.2 | pertes vues 30.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     74 s | durée    126 s | renvoyés  10.3 | pertes vues 29.8 %
+4 Ko, pertes 30%, rafales de 5 s
+  messages avec accusé   livré  87.5 % | antenne     61 s | durée    137 s | renvoyés   0.0 | pertes vues 13.5 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     64 s | durée    113 s | renvoyés   6.1 | pertes vues 23.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     71 s | durée    108 s | renvoyés  10.2 | pertes vues 24.9 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     64 s | durée    113 s | renvoyés   6.1 | pertes vues 23.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     71 s | durée    108 s | renvoyés  10.2 | pertes vues 24.9 %
+4 Ko, pertes 30%, rafales de 15 s
+  messages avec accusé   livré  90.0 % | antenne     56 s | durée    104 s | renvoyés   0.0 | pertes vues  8.8 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     62 s | durée     99 s | renvoyés   6.1 | pertes vues 20.3 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     65 s | durée     98 s | renvoyés   7.5 | pertes vues 20.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     62 s | durée     99 s | renvoyés   6.1 | pertes vues 20.3 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     65 s | durée     98 s | renvoyés   7.5 | pertes vues 20.7 %
+4 Ko, pertes 30%, rafales de 45 s
+  messages avec accusé   livré  77.5 % | antenne     53 s | durée     95 s | renvoyés   0.0 | pertes vues  7.1 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     53 s | durée     99 s | renvoyés   1.8 | pertes vues 10.3 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     53 s | durée     98 s | renvoyés   1.6 | pertes vues 10.4 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     53 s | durée     99 s | renvoyés   1.8 | pertes vues 10.3 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     53 s | durée     98 s | renvoyés   1.6 | pertes vues 10.4 %
+
+10 Ko, pertes 10%, indépendantes
+  messages avec accusé   livré 100.0 % | antenne    144 s | durée    283 s | renvoyés   0.0 | pertes vues 10.5 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    120 s | durée    142 s | renvoyés   3.1 | pertes vues 10.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    121 s | durée    143 s | renvoyés   3.9 | pertes vues 10.1 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    120 s | durée    142 s | renvoyés   3.1 | pertes vues 10.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    121 s | durée    143 s | renvoyés   3.9 | pertes vues 10.1 %
+10 Ko, pertes 10%, rafales de 5 s
+  messages avec accusé   livré 100.0 % | antenne    126 s | durée    178 s | renvoyés   0.0 | pertes vues  3.6 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    125 s | durée    144 s | renvoyés   5.8 | pertes vues  9.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    126 s | durée    143 s | renvoyés   6.6 | pertes vues  9.6 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    125 s | durée    144 s | renvoyés   5.8 | pertes vues  9.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    126 s | durée    143 s | renvoyés   6.6 | pertes vues  9.6 %
+10 Ko, pertes 10%, rafales de 15 s
+  messages avec accusé   livré  95.0 % | antenne    122 s | durée    157 s | renvoyés   0.0 | pertes vues  2.1 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    123 s | durée    140 s | renvoyés   4.9 | pertes vues  7.5 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    124 s | durée    141 s | renvoyés   5.6 | pertes vues  7.4 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    123 s | durée    140 s | renvoyés   4.9 | pertes vues  7.5 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    124 s | durée    141 s | renvoyés   5.6 | pertes vues  7.4 %
+10 Ko, pertes 10%, rafales de 45 s
+  messages avec accusé   livré  82.5 % | antenne    121 s | durée    156 s | renvoyés   0.0 | pertes vues  2.0 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    119 s | durée    144 s | renvoyés   3.0 | pertes vues  5.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    121 s | durée    144 s | renvoyés   4.0 | pertes vues  4.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    119 s | durée    144 s | renvoyés   3.0 | pertes vues  5.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    121 s | durée    144 s | renvoyés   4.0 | pertes vues  4.7 %
+
+10 Ko, pertes 20%, indépendantes
+  messages avec accusé   livré  75.0 % | antenne    178 s | durée    481 s | renvoyés   0.0 | pertes vues 20.5 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    135 s | durée    173 s | renvoyés   9.1 | pertes vues 20.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    139 s | durée    177 s | renvoyés  10.6 | pertes vues 20.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    135 s | durée    173 s | renvoyés   9.1 | pertes vues 20.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    139 s | durée    177 s | renvoyés  10.6 | pertes vues 20.3 %
+10 Ko, pertes 20%, rafales de 5 s
+  messages avec accusé   livré  97.5 % | antenne    136 s | durée    236 s | renvoyés   0.0 | pertes vues  7.7 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    134 s | durée    168 s | renvoyés   9.0 | pertes vues 16.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    137 s | durée    169 s | renvoyés  10.7 | pertes vues 17.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    134 s | durée    168 s | renvoyés   9.0 | pertes vues 16.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    137 s | durée    169 s | renvoyés  10.7 | pertes vues 17.3 %
+10 Ko, pertes 20%, rafales de 15 s
+  messages avec accusé   livré  87.5 % | antenne    128 s | durée    196 s | renvoyés   0.0 | pertes vues  4.9 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    136 s | durée    171 s | renvoyés  10.2 | pertes vues 15.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    134 s | durée    168 s | renvoyés   9.4 | pertes vues 15.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    136 s | durée    171 s | renvoyés  10.2 | pertes vues 15.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    134 s | durée    168 s | renvoyés   9.4 | pertes vues 15.3 %
+10 Ko, pertes 20%, rafales de 45 s
+  messages avec accusé   livré  70.0 % | antenne    125 s | durée    183 s | renvoyés   0.0 | pertes vues  4.0 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    127 s | durée    169 s | renvoyés   5.8 | pertes vues  9.9 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    125 s | durée    169 s | renvoyés   5.2 | pertes vues 10.1 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    127 s | durée    169 s | renvoyés   5.8 | pertes vues  9.9 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    125 s | durée    169 s | renvoyés   5.2 | pertes vues 10.1 %
+
+10 Ko, pertes 30%, indépendantes
+  messages avec accusé   livré  15.0 % | antenne    220 s | durée    747 s | renvoyés   0.0 | pertes vues 30.5 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    162 s | durée    229 s | renvoyés  20.3 | pertes vues 30.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    161 s | durée    224 s | renvoyés  20.2 | pertes vues 30.4 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    162 s | durée    229 s | renvoyés  20.3 | pertes vues 30.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    161 s | durée    224 s | renvoyés  20.2 | pertes vues 30.4 %
+10 Ko, pertes 30%, rafales de 5 s
+  messages avec accusé   livré  70.0 % | antenne    153 s | durée    341 s | renvoyés   0.0 | pertes vues 14.0 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    157 s | durée    212 s | renvoyés  19.1 | pertes vues 27.5 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    159 s | durée    210 s | renvoyés  20.0 | pertes vues 27.5 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    157 s | durée    212 s | renvoyés  19.1 | pertes vues 27.5 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    159 s | durée    210 s | renvoyés  20.0 | pertes vues 27.5 %
+10 Ko, pertes 30%, rafales de 15 s
+  messages avec accusé   livré  77.5 % | antenne    136 s | durée    243 s | renvoyés   0.0 | pertes vues  8.2 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    152 s | durée    198 s | renvoyés  17.1 | pertes vues 23.2 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    151 s | durée    193 s | renvoyés  16.8 | pertes vues 22.8 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    152 s | durée    198 s | renvoyés  17.1 | pertes vues 23.2 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    151 s | durée    193 s | renvoyés  16.8 | pertes vues 22.8 %
+10 Ko, pertes 30%, rafales de 45 s
+  messages avec accusé   livré  52.5 % | antenne    130 s | durée    216 s | renvoyés   0.0 | pertes vues  6.6 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    145 s | durée    216 s | renvoyés  13.7 | pertes vues 19.5 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    140 s | durée    209 s | renvoyés  11.2 | pertes vues 19.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    145 s | durée    216 s | renvoyés  13.7 | pertes vues 19.5 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    140 s | durée    209 s | renvoyés  11.2 | pertes vues 19.7 %
+
+30 Ko, pertes 10%, indépendantes
+  messages avec accusé   livré  90.0 % | antenne    430 s | durée    832 s | renvoyés   0.0 | pertes vues 10.3 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    380 s | durée    427 s | renvoyés  16.4 | pertes vues 10.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    378 s | durée    425 s | renvoyés  16.4 | pertes vues 10.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    385 s | durée    432 s | renvoyés  15.7 | pertes vues 10.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    385 s | durée    430 s | renvoyés  16.6 | pertes vues 10.6 %
+30 Ko, pertes 10%, rafales de 5 s
+  messages avec accusé   livré  97.5 % | antenne    375 s | durée    520 s | renvoyés   0.0 | pertes vues  3.3 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    385 s | durée    425 s | renvoyés  23.1 | pertes vues  9.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    377 s | durée    419 s | renvoyés  19.0 | pertes vues  9.8 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    389 s | durée    430 s | renvoyés  22.3 | pertes vues  9.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    385 s | durée    425 s | renvoyés  19.6 | pertes vues  9.7 %
+30 Ko, pertes 10%, rafales de 15 s
+  messages avec accusé   livré  90.0 % | antenne    365 s | durée    470 s | renvoyés   0.0 | pertes vues  2.1 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    377 s | durée    417 s | renvoyés  22.8 | pertes vues  9.3 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    371 s | durée    410 s | renvoyés  19.8 | pertes vues  9.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    383 s | durée    423 s | renvoyés  22.8 | pertes vues  9.2 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    377 s | durée    416 s | renvoyés  19.4 | pertes vues  9.1 %
+30 Ko, pertes 10%, rafales de 45 s
+  messages avec accusé   livré  67.5 % | antenne    361 s | durée    451 s | renvoyés   0.0 | pertes vues  1.6 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    358 s | durée    394 s | renvoyés  19.1 | pertes vues  6.4 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    356 s | durée    391 s | renvoyés  17.8 | pertes vues  6.6 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    362 s | durée    398 s | renvoyés  19.0 | pertes vues  6.3 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    362 s | durée    397 s | renvoyés  18.6 | pertes vues  6.3 %
+
+30 Ko, pertes 20%, indépendantes
+  messages avec accusé   livré  45.0 % | antenne    533 s | durée   1434 s | renvoyés   0.0 | pertes vues 20.5 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    426 s | durée    491 s | renvoyés  34.8 | pertes vues 20.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    428 s | durée    497 s | renvoyés  35.8 | pertes vues 20.6 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    432 s | durée    501 s | renvoyés  30.4 | pertes vues 20.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    443 s | durée    510 s | renvoyés  35.5 | pertes vues 20.5 %
+30 Ko, pertes 20%, rafales de 5 s
+  messages avec accusé   livré  95.0 % | antenne    407 s | durée    707 s | renvoyés   0.0 | pertes vues  7.7 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    435 s | durée    501 s | renvoyés  40.7 | pertes vues 18.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    428 s | durée    489 s | renvoyés  37.3 | pertes vues 18.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    451 s | durée    515 s | renvoyés  41.5 | pertes vues 18.9 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    441 s | durée    506 s | renvoyés  36.0 | pertes vues 18.9 %
+30 Ko, pertes 20%, rafales de 15 s
+  messages avec accusé   livré  80.0 % | antenne    379 s | durée    555 s | renvoyés   0.0 | pertes vues  4.2 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    422 s | durée    488 s | renvoyés  39.0 | pertes vues 17.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    419 s | durée    483 s | renvoyés  37.0 | pertes vues 16.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    436 s | durée    500 s | renvoyés  39.5 | pertes vues 16.8 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    432 s | durée    494 s | renvoyés  36.4 | pertes vues 16.7 %
+30 Ko, pertes 20%, rafales de 45 s
+  messages avec accusé   livré  37.5 % | antenne    373 s | durée    533 s | renvoyés   0.0 | pertes vues  3.8 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    401 s | durée    471 s | renvoyés  34.6 | pertes vues 14.2 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    401 s | durée    469 s | renvoyés  34.1 | pertes vues 14.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    412 s | durée    480 s | renvoyés  35.0 | pertes vues 14.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    410 s | durée    478 s | renvoyés  34.1 | pertes vues 14.3 %
+
+30 Ko, pertes 30%, indépendantes
+  messages avec accusé   livré   0.0 % | antenne    656 s | durée   2204 s | renvoyés   0.0 | pertes vues 30.3 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    497 s | durée    592 s | renvoyés  67.5 | pertes vues 30.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    492 s | durée    582 s | renvoyés  65.0 | pertes vues 30.9 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    495 s | durée    594 s | renvoyés  55.4 | pertes vues 30.8 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    498 s | durée    589 s | renvoyés  58.0 | pertes vues 30.8 %
+30 Ko, pertes 30%, rafales de 5 s
+  messages avec accusé   livré  45.0 % | antenne    455 s | durée    998 s | renvoyés   0.0 | pertes vues 13.7 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    497 s | durée    589 s | renvoyés  69.5 | pertes vues 29.1 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    500 s | durée    585 s | renvoyés  70.5 | pertes vues 28.8 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    507 s | durée    598 s | renvoyés  65.0 | pertes vues 29.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    506 s | durée    590 s | renvoyés  63.8 | pertes vues 29.2 %
+30 Ko, pertes 30%, rafales de 15 s
+  messages avec accusé   livré  40.0 % | antenne    403 s | durée    703 s | renvoyés   0.0 | pertes vues  7.8 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    499 s | durée    594 s | renvoyés  71.7 | pertes vues 26.8 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    493 s | durée    580 s | renvoyés  69.2 | pertes vues 26.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    521 s | durée    612 s | renvoyés  74.3 | pertes vues 26.9 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    497 s | durée    592 s | renvoyés  62.5 | pertes vues 26.7 %
+30 Ko, pertes 30%, rafales de 45 s
+  messages avec accusé   livré  27.5 % | antenne    384 s | durée    604 s | renvoyés   0.0 | pertes vues  5.6 %
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    462 s | durée    572 s | renvoyés  59.6 | pertes vues 22.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    455 s | durée    564 s | renvoyés  56.2 | pertes vues 22.6 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    473 s | durée    585 s | renvoyés  59.0 | pertes vues 22.2 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    466 s | durée    570 s | renvoyés  55.6 | pertes vues 22.4 %
+
+Avec le budget d'émission (protocole.Budget), 10 Ko
+  pertes 20%, indépendantes RAID 6 (le nôtre)      livré 100.0 % | antenne    137 s | durée    559 s | renvoyés   9.6 | pertes vues 20.2 %
+  pertes 20%, indépendantes RAID 6 entrelacé       livré 100.0 % | antenne    142 s | durée    642 s | renvoyés  12.5 | pertes vues 20.1 %
+  pertes 20%, indépendantes Cauchy ≤ 4             livré 100.0 % | antenne    137 s | durée    559 s | renvoyés   9.6 | pertes vues 20.2 %
+  pertes 20%, indépendantes Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    142 s | durée    642 s | renvoyés  12.5 | pertes vues 20.1 %
+  pertes 20%, rafales 15 s  RAID 6 (le nôtre)      livré 100.0 % | antenne    134 s | durée    549 s | renvoyés   9.2 | pertes vues 17.4 %
+  pertes 20%, rafales 15 s  RAID 6 entrelacé       livré 100.0 % | antenne    134 s | durée    546 s | renvoyés   9.0 | pertes vues 18.0 %
+  pertes 20%, rafales 15 s  Cauchy ≤ 4             livré 100.0 % | antenne    134 s | durée    549 s | renvoyés   9.2 | pertes vues 17.4 %
+  pertes 20%, rafales 15 s  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    134 s | durée    546 s | renvoyés   9.0 | pertes vues 18.0 %
+  pertes 20%, rafales 45 s  RAID 6 (le nôtre)      livré 100.0 % | antenne    137 s | durée    642 s | renvoyés  10.3 | pertes vues 17.5 %
+  pertes 20%, rafales 45 s  RAID 6 entrelacé       livré 100.0 % | antenne    134 s | durée    563 s | renvoyés   9.0 | pertes vues 17.7 %
+  pertes 20%, rafales 45 s  Cauchy ≤ 4             livré 100.0 % | antenne    137 s | durée    642 s | renvoyés  10.3 | pertes vues 17.5 %
+  pertes 20%, rafales 45 s  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    134 s | durée    563 s | renvoyés   9.0 | pertes vues 17.7 %
+  pertes 30%, indépendantes RAID 6 (le nôtre)      livré 100.0 % | antenne    167 s | durée   1197 s | renvoyés  22.8 | pertes vues 30.7 %
+  pertes 30%, indépendantes RAID 6 entrelacé       livré 100.0 % | antenne    168 s | durée   1109 s | renvoyés  23.8 | pertes vues 30.5 %
+  pertes 30%, indépendantes Cauchy ≤ 4             livré 100.0 % | antenne    167 s | durée   1197 s | renvoyés  22.8 | pertes vues 30.7 %
+  pertes 30%, indépendantes Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    168 s | durée   1109 s | renvoyés  23.8 | pertes vues 30.5 %
+  pertes 30%, rafales 15 s  RAID 6 (le nôtre)      livré 100.0 % | antenne    155 s | durée    792 s | renvoyés  18.0 | pertes vues 27.7 %
+  pertes 30%, rafales 15 s  RAID 6 entrelacé       livré 100.0 % | antenne    154 s | durée    712 s | renvoyés  17.8 | pertes vues 28.3 %
+  pertes 30%, rafales 15 s  Cauchy ≤ 4             livré 100.0 % | antenne    155 s | durée    792 s | renvoyés  18.0 | pertes vues 27.7 %
+  pertes 30%, rafales 15 s  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    154 s | durée    712 s | renvoyés  17.8 | pertes vues 28.3 %
+  pertes 30%, rafales 45 s  RAID 6 (le nôtre)      livré 100.0 % | antenne    152 s | durée   1000 s | renvoyés  16.6 | pertes vues 25.1 %
+  pertes 30%, rafales 45 s  RAID 6 entrelacé       livré 100.0 % | antenne    150 s | durée    716 s | renvoyés  15.4 | pertes vues 25.6 %
+  pertes 30%, rafales 45 s  Cauchy ≤ 4             livré 100.0 % | antenne    152 s | durée   1000 s | renvoyés  16.6 | pertes vues 25.1 %
+  pertes 30%, rafales 45 s  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    150 s | durée    716 s | renvoyés  15.4 | pertes vues 25.6 %
+
+PARTIE 2 : rafales comptées en trames (part de trames perdues = pertes visées), parités fixes
+4 Ko, pertes 20%, indépendantes
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     56 s | durée     91 s | renvoyés   2.7 | pertes vues 19.1 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     56 s | durée     90 s | renvoyés   2.9 | pertes vues 19.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     56 s | durée     91 s | renvoyés   2.7 | pertes vues 19.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     56 s | durée     90 s | renvoyés   2.9 | pertes vues 19.3 %
+  RAID 6 fixe 2          livré 100.0 % | antenne     58 s | durée     88 s | renvoyés   1.6 | pertes vues 19.3 %
+  Cauchy fixe 3          livré 100.0 % | antenne     61 s | durée     90 s | renvoyés   0.6 | pertes vues 19.6 %
+  Cauchy fixe 4          livré 100.0 % | antenne     66 s | durée     93 s | renvoyés   0.0 | pertes vues 19.3 %
+4 Ko, pertes 20%, rafales de 3 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     59 s | durée    114 s | renvoyés   4.2 | pertes vues 20.1 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     66 s | durée    109 s | renvoyés   7.8 | pertes vues 20.0 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     59 s | durée    114 s | renvoyés   4.2 | pertes vues 20.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     66 s | durée    109 s | renvoyés   7.8 | pertes vues 20.0 %
+  RAID 6 fixe 2          livré 100.0 % | antenne     63 s | durée    112 s | renvoyés   4.0 | pertes vues 20.2 %
+  Cauchy fixe 3          livré 100.0 % | antenne     67 s | durée    115 s | renvoyés   3.2 | pertes vues 20.1 %
+  Cauchy fixe 4          livré 100.0 % | antenne     71 s | durée    118 s | renvoyés   2.0 | pertes vues 20.2 %
+4 Ko, pertes 20%, rafales de 6 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     59 s | durée    121 s | renvoyés   4.1 | pertes vues 18.8 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     61 s | durée    116 s | renvoyés   5.7 | pertes vues 18.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     59 s | durée    121 s | renvoyés   4.1 | pertes vues 18.8 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     61 s | durée    116 s | renvoyés   5.7 | pertes vues 18.7 %
+  RAID 6 fixe 2          livré 100.0 % | antenne     64 s | durée    128 s | renvoyés   4.2 | pertes vues 19.6 %
+  Cauchy fixe 3          livré 100.0 % | antenne     69 s | durée    129 s | renvoyés   4.1 | pertes vues 18.9 %
+  Cauchy fixe 4          livré 100.0 % | antenne     74 s | durée    133 s | renvoyés   3.5 | pertes vues 19.1 %
+4 Ko, pertes 30%, indépendantes
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     64 s | durée    119 s | renvoyés   5.5 | pertes vues 29.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     65 s | durée    121 s | renvoyés   6.0 | pertes vues 29.4 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     64 s | durée    119 s | renvoyés   5.5 | pertes vues 29.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     65 s | durée    121 s | renvoyés   6.0 | pertes vues 29.4 %
+  RAID 6 fixe 2          livré 100.0 % | antenne     65 s | durée    116 s | renvoyés   4.8 | pertes vues 29.7 %
+  Cauchy fixe 3          livré 100.0 % | antenne     67 s | durée    112 s | renvoyés   2.9 | pertes vues 29.8 %
+  Cauchy fixe 4          livré 100.0 % | antenne     70 s | durée    109 s | renvoyés   1.4 | pertes vues 29.6 %
+4 Ko, pertes 30%, rafales de 3 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     67 s | durée    150 s | renvoyés   7.5 | pertes vues 28.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     74 s | durée    149 s | renvoyés  10.9 | pertes vues 30.4 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     67 s | durée    150 s | renvoyés   7.5 | pertes vues 28.6 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     74 s | durée    149 s | renvoyés  10.9 | pertes vues 30.4 %
+  RAID 6 fixe 2          livré 100.0 % | antenne     70 s | durée    152 s | renvoyés   7.0 | pertes vues 29.3 %
+  Cauchy fixe 3          livré 100.0 % | antenne     72 s | durée    156 s | renvoyés   5.0 | pertes vues 30.2 %
+  Cauchy fixe 4          livré 100.0 % | antenne     76 s | durée    153 s | renvoyés   4.2 | pertes vues 30.1 %
+4 Ko, pertes 30%, rafales de 6 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne     63 s | durée    171 s | renvoyés   5.7 | pertes vues 26.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne     66 s | durée    158 s | renvoyés   6.9 | pertes vues 26.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne     63 s | durée    171 s | renvoyés   5.7 | pertes vues 26.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne     66 s | durée    158 s | renvoyés   6.9 | pertes vues 26.3 %
+  RAID 6 fixe 2          livré 100.0 % | antenne     67 s | durée    174 s | renvoyés   5.3 | pertes vues 27.3 %
+  Cauchy fixe 3          livré 100.0 % | antenne     71 s | durée    165 s | renvoyés   4.9 | pertes vues 27.1 %
+  Cauchy fixe 4          livré 100.0 % | antenne     77 s | durée    171 s | renvoyés   4.5 | pertes vues 27.6 %
+
+10 Ko, pertes 20%, indépendantes
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    132 s | durée    173 s | renvoyés   7.5 | pertes vues 19.3 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    134 s | durée    172 s | renvoyés   8.2 | pertes vues 19.3 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    132 s | durée    173 s | renvoyés   7.5 | pertes vues 19.3 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    134 s | durée    172 s | renvoyés   8.2 | pertes vues 19.3 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    135 s | durée    175 s | renvoyés   4.9 | pertes vues 19.4 %
+  Cauchy fixe 3          livré 100.0 % | antenne    140 s | durée    171 s | renvoyés   1.5 | pertes vues 19.1 %
+  Cauchy fixe 4          livré 100.0 % | antenne    149 s | durée    182 s | renvoyés   0.3 | pertes vues 19.5 %
+10 Ko, pertes 20%, rafales de 3 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    140 s | durée    182 s | renvoyés  11.8 | pertes vues 18.9 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    140 s | durée    172 s | renvoyés  12.3 | pertes vues 18.8 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    140 s | durée    182 s | renvoyés  11.8 | pertes vues 18.9 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    140 s | durée    172 s | renvoyés  12.3 | pertes vues 18.8 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    145 s | durée    189 s | renvoyés   9.5 | pertes vues 19.0 %
+  Cauchy fixe 3          livré 100.0 % | antenne    154 s | durée    199 s | renvoyés   8.4 | pertes vues 19.0 %
+  Cauchy fixe 4          livré 100.0 % | antenne    162 s | durée    208 s | renvoyés   6.1 | pertes vues 19.5 %
+10 Ko, pertes 20%, rafales de 6 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    139 s | durée    203 s | renvoyés  11.3 | pertes vues 17.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    141 s | durée    203 s | renvoyés  12.3 | pertes vues 17.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    139 s | durée    203 s | renvoyés  11.3 | pertes vues 17.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    141 s | durée    203 s | renvoyés  12.3 | pertes vues 17.7 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    147 s | durée    212 s | renvoyés  10.6 | pertes vues 17.8 %
+  Cauchy fixe 3          livré 100.0 % | antenne    158 s | durée    226 s | renvoyés   9.7 | pertes vues 18.3 %
+  Cauchy fixe 4          livré 100.0 % | antenne    167 s | durée    237 s | renvoyés   8.2 | pertes vues 18.5 %
+10 Ko, pertes 30%, indépendantes
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    152 s | durée    217 s | renvoyés  15.2 | pertes vues 29.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    154 s | durée    213 s | renvoyés  16.3 | pertes vues 29.6 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    152 s | durée    217 s | renvoyés  15.2 | pertes vues 29.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    154 s | durée    213 s | renvoyés  16.3 | pertes vues 29.6 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    152 s | durée    206 s | renvoyés  12.8 | pertes vues 29.7 %
+  Cauchy fixe 3          livré 100.0 % | antenne    152 s | durée    204 s | renvoyés   7.0 | pertes vues 29.7 %
+  Cauchy fixe 4          livré 100.0 % | antenne    157 s | durée    208 s | renvoyés   3.2 | pertes vues 29.8 %
+10 Ko, pertes 30%, rafales de 3 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    164 s | durée    237 s | renvoyés  21.9 | pertes vues 30.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    169 s | durée    237 s | renvoyés  24.5 | pertes vues 29.9 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    164 s | durée    237 s | renvoyés  21.9 | pertes vues 30.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    169 s | durée    237 s | renvoyés  24.5 | pertes vues 29.9 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    166 s | durée    259 s | renvoyés  18.7 | pertes vues 30.6 %
+  Cauchy fixe 3          livré 100.0 % | antenne    173 s | durée    250 s | renvoyés  16.7 | pertes vues 30.4 %
+  Cauchy fixe 4          livré 100.0 % | antenne    177 s | durée    268 s | renvoyés  12.4 | pertes vues 31.0 %
+10 Ko, pertes 30%, rafales de 6 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    155 s | durée    253 s | renvoyés  18.0 | pertes vues 26.4 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    157 s | durée    253 s | renvoyés  18.8 | pertes vues 26.7 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    155 s | durée    253 s | renvoyés  18.0 | pertes vues 26.4 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    157 s | durée    253 s | renvoyés  18.8 | pertes vues 26.7 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    162 s | durée    269 s | renvoyés  17.1 | pertes vues 26.8 %
+  Cauchy fixe 3          livré  97.5 % | antenne    167 s | durée    287 s | renvoyés  13.2 | pertes vues 27.5 %
+  Cauchy fixe 4          livré 100.0 % | antenne    181 s | durée    287 s | renvoyés  14.6 | pertes vues 27.5 %
+
+30 Ko, pertes 20%, indépendantes
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    411 s | durée    478 s | renvoyés  27.3 | pertes vues 20.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    415 s | durée    483 s | renvoyés  29.3 | pertes vues 20.0 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    418 s | durée    482 s | renvoyés  23.4 | pertes vues 20.1 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    423 s | durée    494 s | renvoyés  25.4 | pertes vues 20.0 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    415 s | durée    481 s | renvoyés  22.4 | pertes vues 20.0 %
+  Cauchy fixe 3          livré 100.0 % | antenne    437 s | durée    500 s | renvoyés  15.3 | pertes vues 19.9 %
+  Cauchy fixe 4          livré 100.0 % | antenne    460 s | durée    525 s | renvoyés   9.1 | pertes vues 20.0 %
+30 Ko, pertes 20%, rafales de 3 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    436 s | durée    505 s | renvoyés  42.3 | pertes vues 20.6 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    425 s | durée    500 s | renvoyés  36.4 | pertes vues 20.6 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    444 s | durée    520 s | renvoyés  37.8 | pertes vues 20.8 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    434 s | durée    508 s | renvoyés  33.0 | pertes vues 20.8 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    448 s | durée    524 s | renvoyés  38.4 | pertes vues 20.6 %
+  Cauchy fixe 3          livré 100.0 % | antenne    468 s | durée    549 s | renvoyés  30.4 | pertes vues 20.7 %
+  Cauchy fixe 4          livré 100.0 % | antenne    501 s | durée    594 s | renvoyés  28.2 | pertes vues 21.0 %
+30 Ko, pertes 20%, rafales de 6 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    442 s | durée    548 s | renvoyés  47.7 | pertes vues 19.8 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    433 s | durée    545 s | renvoyés  42.5 | pertes vues 19.9 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    455 s | durée    561 s | renvoyés  44.9 | pertes vues 19.7 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    436 s | durée    549 s | renvoyés  35.9 | pertes vues 20.0 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    459 s | durée    569 s | renvoyés  43.2 | pertes vues 20.0 %
+  Cauchy fixe 3          livré  97.5 % | antenne    487 s | durée    595 s | renvoyés  39.4 | pertes vues 20.2 %
+  Cauchy fixe 4          livré  97.5 % | antenne    519 s | durée    640 s | renvoyés  37.1 | pertes vues 20.4 %
+30 Ko, pertes 30%, indépendantes
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    468 s | durée    558 s | renvoyés  52.2 | pertes vues 29.7 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    471 s | durée    566 s | renvoyés  53.2 | pertes vues 29.8 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    472 s | durée    569 s | renvoyés  41.6 | pertes vues 29.8 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    480 s | durée    581 s | renvoyés  45.7 | pertes vues 29.8 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    467 s | durée    555 s | renvoyés  47.6 | pertes vues 29.8 %
+  Cauchy fixe 3          livré 100.0 % | antenne    463 s | durée    554 s | renvoyés  27.8 | pertes vues 29.8 %
+  Cauchy fixe 4          livré 100.0 % | antenne    479 s | durée    562 s | renvoyés  17.6 | pertes vues 29.8 %
+30 Ko, pertes 30%, rafales de 3 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    498 s | durée    616 s | renvoyés  67.9 | pertes vues 30.0 %
+  RAID 6 entrelacé       livré 100.0 % | antenne    495 s | durée    610 s | renvoyés  66.9 | pertes vues 30.1 %
+  Cauchy ≤ 4             livré 100.0 % | antenne    510 s | durée    625 s | renvoyés  62.1 | pertes vues 30.0 %
+  Cauchy ≤ 4 entrelacé   livré 100.0 % | antenne    503 s | durée    602 s | renvoyés  59.9 | pertes vues 29.9 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    501 s | durée    619 s | renvoyés  63.1 | pertes vues 30.1 %
+  Cauchy fixe 3          livré 100.0 % | antenne    516 s | durée    639 s | renvoyés  52.6 | pertes vues 30.3 %
+  Cauchy fixe 4          livré 100.0 % | antenne    537 s | durée    647 s | renvoyés  45.2 | pertes vues 29.9 %
+30 Ko, pertes 30%, rafales de 6 trames en moyenne
+  RAID 6 (le nôtre)      livré 100.0 % | antenne    507 s | durée    656 s | renvoyés  75.0 | pertes vues 29.6 %
+  RAID 6 entrelacé       livré  97.5 % | antenne    501 s | durée    658 s | renvoyés  72.1 | pertes vues 29.7 %
+  Cauchy ≤ 4             livré  97.5 % | antenne    522 s | durée    714 s | renvoyés  71.0 | pertes vues 29.8 %
+  Cauchy ≤ 4 entrelacé   livré  97.5 % | antenne    500 s | durée    664 s | renvoyés  61.0 | pertes vues 29.9 %
+  RAID 6 fixe 2          livré 100.0 % | antenne    509 s | durée    642 s | renvoyés  66.9 | pertes vues 29.2 %
+  Cauchy fixe 3          livré  97.5 % | antenne    534 s | durée    704 s | renvoyés  61.4 | pertes vues 29.3 %
+  Cauchy fixe 4          livré  92.5 % | antenne    556 s | durée    724 s | renvoyés  54.0 | pertes vues 29.5 %
+
+
+Calcul : 63 s

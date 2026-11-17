@@ -106,7 +106,8 @@ The receiver rebuilds 1 lost chunk with P (or Q) and 2 with P and Q.
 - **Final summary**: at the last chunk, if nothing is missing, at once; otherwise after a silence of twice the usual
   gap between frames (median of the last 8), at least 5 s, so that the parity of the last group can arrive. Any
   resent chunk after that restarts the wait, and a chunk that completes the content triggers the summary at once.
-- After 10 resends without an answer: failure.
+- After 20 resends without an answer: failure. (10 until 17 November 2026: with bursty losses, long outages made up
+  to 12.5 % of transfers give up in simulation, 5 % with 15 resends, none with 20; see §8.)
 
 ## 7. Airtime budget
 
@@ -138,6 +139,36 @@ first hop heard the packet (`src/mesh/ReliableRouter.cpp:58`).
 
 In-memory simulation ([`prototype/simulation.py`](prototype/simulation.py)), one hop, LONG_FAST, within the budget:
 10 KB in about 7 min, 30 KB in about 1 h 10. Above about 10 KB a faster preset is needed.
+
+### Bursty losses (17 November 2026)
+
+Losses on real links tend to come in bursts; the results above drew each loss independently. Two burst models were
+added: outages in time (Gilbert-Elliott, the link is down `loss` of the time on average, a frame is lost if the
+middle of its transmission falls in an outage) and bursts counted in frames (the hardest case: waiting does not
+help).
+
+Bench, same setup as above, 20 % loss per link as outages of 15 s on average (up to 48 s), 5 runs per case, the same
+outages for every method:
+- acked messages: 1 complete file out of 5, 81 % of messages, 3.2 false successes per run (up to 12);
+- this protocol (20 resends): 5 out of 5, 178 s, 113 s of airtime;
+- the same with a systematic Cauchy code and 3 parity chunks per group (experimental option, see below): 5 out of 5,
+  179 s, 126 s of airtime (+11 %).
+
+With outages the sender waits instead of transmitting into them: the frame loss actually seen was 9.5 to 13.6 %,
+against 18 % with independent loss at the same rate. Compare the methods with each other, under the same outages.
+
+Simulation ([`prototype/rafales.py`](prototype/rafales.py), one hop, 4 to 30 KB, 10 to 30 % loss, outages of 5 to
+45 s or bursts of 3 to 6 frames, 40 runs per case; results in `prototype/resultats-rafales-2026-11-17-*.txt`):
+- with 10 resends, this protocol gave up on up to 12.5 % of transfers during long outages; the parity was not the
+  cause. With 20 resends: 100 % delivered in all 162 situations, unchanged results without bursts;
+- more parity (Cauchy, up to 4 per group, adaptive or fixed) never delivered more files: it cuts resent chunks but
+  not duration, for 5 to 20 % more airtime. The summary already lists the missing chunks of each group (1 byte per
+  group), so a parity chunk costs as much airtime as resending the missing chunk; it only saves a round trip;
+- interleaving the groups of a window did not help either.
+
+The Cauchy code (`prototype/cauchy.py`, `Emetteur(code="cauchy")`, bit 0 of the HEADER's reserved byte, parity
+number `group << 2 | j`) and interleaving (`entrelacer=True`) stay as experimental options of the Python prototype,
+off by default; they are not in the C++ port.
 
 **Not yet measured on real radios.**
 

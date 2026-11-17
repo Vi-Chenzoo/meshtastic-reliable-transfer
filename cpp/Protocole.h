@@ -16,6 +16,7 @@
 // Parité RAID 6 (P, Q) par lot de 8, adaptative ; fenêtres de 4 lots, deux d'avance ; fin sur silence ; reprise
 // d'un contenu déjà commencé, reconnu par son empreinte. Détail des règles : en-tête de prototype/protocole.py.
 #pragma once
+#include <cstddef> // size_t (Raspbian bookworm ne l'apporte pas autrement, 12 nov. 2026)
 #include "Raid6.h"
 #include <cstdint>
 #include <deque>
@@ -36,6 +37,7 @@ constexpr size_t UTILE_COMPACT = TRAME_MAX - 4;      // 4 octets d'en-tête de M
 constexpr uint8_t ENTETE = 1, PRET = 2, MORCEAU = 3, BILAN = 4, QUESTION = 5;
 constexpr uint16_t DERNIER = 0x8000, PARITE = 0x4000;
 constexpr double FACTEUR_RELANCE = 2.5;
+constexpr unsigned RELANCES_MAX = 20; // relances sans réponse avant échec (prototype : relances_max)
 
 uint32_t crc32(const uint8_t *donnees, size_t n, uint32_t crc = 0); // même valeur que zlib.crc32
 inline uint32_t crc32(const Octets &o)
@@ -55,7 +57,7 @@ class Emetteur
     /// parites : -1 = adaptative ; delaiRelance : <= 0 = mesuré sur l'aller-retour EN-TÊTE / PRÊT ;
     /// final : destinataire final (passage par une station), ajouté à l'EN-TÊTE si avecFinal.
     Emetteur(uint8_t id, const Octets &donnees, size_t utile = UTILE_COMPACT, int parites = -1, double delaiRelance = 0,
-             unsigned relancesMax = 10, bool avecFinal = false, uint32_t final = 0);
+             unsigned relancesMax = RELANCES_MAX, bool avecFinal = false, uint32_t final = 0);
     Trames demarrer(double maintenant);
     void emissionTerminee(double instant); // nos trames sont réellement parties : l'attente commence là
     Trames recevoir(const Octets &trame, double maintenant);

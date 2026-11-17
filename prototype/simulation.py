@@ -26,12 +26,39 @@ ta = importlib.util.module_from_spec(spec); spec.loader.exec_module(ta)
 
 
 class Canal:
-    def __init__(self, preset, perte, graine):
+    def __init__(self, preset, perte, graine, rafale=0.0):
+        """rafale (17 nov. 2026) : 0 = pertes indépendantes trame par trame (modèle historique, mêmes tirages) ;
+        sinon durée MOYENNE en secondes d'une période brouillée (modèle de Gilbert-Elliott en temps continu) : le canal
+        alterne périodes calmes et brouillées de durées exponentielles, brouillé `perte` du temps en moyenne ; une
+        trame est perdue si le milieu de son émission tombe dans une période brouillée. Même taux moyen, mais groupé."""
         self.bw, self.sf, self.cr, _ = ta.PRESETS[preset]
         self.tranche = (4.5 * 2 ** self.sf / self.bw + 7.6) / 1000
         self.perte, self.alea = perte, random.Random(graine)
         self.libre_a, self.antenne, self.trames = 0.0, 0.0, 0
         self.occupe = []                       # intervalles (début, fin) réservés, triés : trames espacées par le budget
+        self.rafale, self.perdues = rafale, 0
+        # rafale < 0 : rafales comptées EN TRAMES (|rafale| trames perdues d'affilée en moyenne), modèle de Gilbert à
+        # deux états tiré trame par trame : la part de trames perdues est `perte` quoi que fasse l'émetteur (le cas le
+        # plus dur : attendre pendant une coupure ne fait plus perdre moins de trames)
+        if rafale < 0 and perte:
+            self.alea_r = random.Random(graine * 7919 + 17)
+            self.etat_brouille = self.alea_r.random() < perte
+        elif rafale and perte:
+            self.alea_r = random.Random(graine * 7919 + 17)    # tirages à part : le reste de la simulation ne bouge pas
+            self.brouille = []                 # périodes brouillées (début, fin), produites au fur et à mesure
+            self.horizon = 0.0
+            self.etat_brouille = self.alea_r.random() < perte   # état de départ selon la proportion de temps
+
+    def _brouille_a(self, t):
+        calme = self.rafale * (1 - self.perte) / self.perte
+        while self.horizon <= t:
+            d = self.alea_r.expovariate(1 / (self.rafale if self.etat_brouille else calme))
+            if self.etat_brouille:
+                self.brouille.append((self.horizon, self.horizon + d))
+            self.horizon += d
+            self.etat_brouille = not self.etat_brouille
+        k = bisect.bisect_right(self.brouille, (t, math.inf)) - 1
+        return k >= 0 and self.brouille[k][0] <= t < self.brouille[k][1]
 
     def duree(self, octets):
         return ta.temps_ms(min(16 + 6 + octets, 255), self.bw, self.sf, self.cr) / 1000
@@ -65,13 +92,37 @@ class Canal:
         self.libre_a = max(self.libre_a, debut + d)
         self.antenne += d
         self.trames += 1
-        return debut + d, self.alea.random() < self.perte
+        if self.rafale < 0 and self.perte:
+            perdue = self.etat_brouille
+            l = -self.rafale
+            sortir, entrer = 1 / l, self.perte / (l * (1 - self.perte))
+            if self.alea_r.random() < (sortir if self.etat_brouille else entrer):
+                self.etat_brouille = not self.etat_brouille
+        elif self.rafale and self.perte:
+            perdue = self._brouille_a(debut + d / 2)
+        else:
+            perdue = self.alea.random() < self.perte
+        self.perdues += perdue
+        return debut + d, perdue
 
 
-def protocole(donnees, utile, preset, perte, graine, parites="auto", budget=False):
-    """budget=True : chaque nœud respecte la discipline d'émission (protocole.Budget : 5 % sur l'heure, canal 25 %)."""
-    canal = Canal(preset, perte, graine)
-    em, rec = Emetteur(1, donnees, parites=parites, utile=utile), Recepteur()
+def protocole(donnees, utile, preset, perte, graine, parites="auto", budget=False, rafale=0.0, code="raid6",
+              entrelacer=False, relances_max=None):
+    """budget=True : chaque nœud respecte la discipline d'émission (protocole.Budget : 5 % sur l'heure, canal 25 %).
+    rafale, code, entrelacer (17 nov. 2026) : voir Canal et protocole.Emetteur. Compte rendu en plus dans les
+    attributs de la fonction : renvois (morceaux de données renvoyés), perte_vue (part des trames perdues)."""
+    canal = Canal(preset, perte, graine, rafale)
+    em = Emetteur(1, donnees, parites=parites, utile=utile, code=code, entrelacer=entrelacer,
+                  **({} if relances_max is None else {"relances_max": relances_max}))
+    rec = Recepteur()
+    renvois = [0]
+    manquants = em.trames_manquants
+
+    def compter(n, masque):
+        trames = manquants(n, masque)
+        renvois[0] += len(trames)
+        return trames
+    em.trames_manquants = compter
     budgets = {"rec": Budget(), "em": Budget()} if budget else {}   # clé = destinataire, donc budget de l'expéditeur
     file_de = {"rec": 0.0, "em": 0.0}      # chaque nœud émet ses trames l'une après l'autre
     evts, n = [], 0                        # (instant, ordre, destinataire, trame)
@@ -116,12 +167,14 @@ def protocole(donnees, utile, preset, perte, graine, parites="auto", budget=Fals
     ok = rec.livres.get(1) == donnees
     protocole.parites_vues = em.parites_envoyees
     protocole.attente_budget = budgets["rec"].attentes if budget else 0.0
+    protocole.renvois = renvois[0]
+    protocole.perte_vue = canal.perdues / max(canal.trames, 1)
     return ok, canal.antenne, maintenant, canal.trames
 
 
-def actuel(donnees, preset, perte, graine):
+def actuel(donnees, preset, perte, graine, rafale=0.0):
     """Un message Meshtastic fiable par morceau de 233 octets, l'un après l'autre."""
-    canal = Canal(preset, perte, graine)
+    canal = Canal(preset, perte, graine, rafale)
     attente = 2 * canal.duree(233) + (8 + 16 + 32) * canal.tranche + 4.5      # getRetransmissionMsec, docs/03
     t, ok = 0.0, True
     for i in range(0, len(donnees), 233):
@@ -136,6 +189,7 @@ def actuel(donnees, preset, perte, graine):
             t = max(arrivee, t) + attente
         else:
             ok = False
+    actuel.perte_vue = canal.perdues / max(canal.trames, 1)
     return ok, canal.antenne, t, canal.trames
 
 

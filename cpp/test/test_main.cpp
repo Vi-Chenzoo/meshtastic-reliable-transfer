@@ -51,7 +51,7 @@ void rejouer(const vecteurs::Scenario &sc)
     Recepteur r1, r2;
     Recepteur *rec = &r1;
     auto nouvelEmetteur = [&](uint8_t ident) {
-        return Emetteur(ident, d, sc.utile, sc.parite, sc.delai, 10, sc.avecFinal, sc.final);
+        return Emetteur(ident, d, sc.utile, sc.parite, sc.delai, RELANCES_MAX, sc.avecFinal, sc.final);
     };
     Emetteur em = nouvelEmetteur(1);
     int phase = 1;
