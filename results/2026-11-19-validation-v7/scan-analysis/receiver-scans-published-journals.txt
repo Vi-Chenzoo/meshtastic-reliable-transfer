@@ -1,0 +1,92 @@
+Essais lus : 44 ; ignorés : 16
+  ignoré 2026-11-19-validation-v7/meetings/journals/m1-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m10-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m11-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m12-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m13-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m14-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m15-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m16-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m2-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m3-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m4-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m5-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m6-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m7-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m8-reply-off : aucune émission LoRa (essai ESP-NOW seul)
+  ignoré 2026-11-19-validation-v7/meetings/journals/m9-reply-on : aucune émission LoRa (essai ESP-NOW seul)
+Trames étudiées (non recouvertes par une émission du récepteur, reçues ou absentes) : 3453
+
+== LONG_FAST ==  Ts = 8.19 ms, préambule total 165.9 ms
+  sans balayage « occupé » chez le récepteur pendant la trame : 0 perdues sur 978
+  avec au moins un balayage « occupé » pendant la trame      : 1 perdues sur 53
+    1er balayage entre +1 et +2 symboles (8 à 16 ms) : 0 perdues sur 3
+    1er balayage entre +2 et +4 symboles (16 à 33 ms) : 0 perdues sur 17
+    1er balayage entre +4 et +8 symboles (33 à 66 ms) : 0 perdues sur 28
+    1er balayage entre +16 et +… symboles (131 à 811 ms) : 1 perdues sur 1
+    1 balayage « occupé » pendant la trame : 0 perdues sur 47
+    2 balayages « occupé » pendant la trame : 1 perdues sur 6
+  selon le préambule RESTANT (en symboles) au DERNIER balayage « occupé » tombé pendant le préambule :
+    reste 7,5 à 10 symboles : 0 perdues sur 1
+    reste 10 et plus symboles : 0 perdues sur 51
+    tous les balayages APRÈS la fin du préambule (le récepteur ne recevait déjà plus) : 1 perdues sur 1
+  écart entre deux balayages « occupé » successifs de la même trame (< 328 ms) : 6 mesures, min 36.3, médiane 41.7, max 298.0 ms
+    1er balayage dans le 1er symbole : 0 perdues sur 4
+    réception précédente finie depuis 0 à 100 ms : 0 perdues sur 5
+    réception précédente finie depuis 100 à 500 ms : 1 perdues sur 17
+    réception précédente finie depuis 500 à 5000 ms : 0 perdues sur 26
+    réception précédente finie depuis 5000 à … ms : 0 perdues sur 3
+  sans balayage occupé mais avec une attente « radio en réception » du récepteur : 0 perdues sur 426
+
+== MEDIUM_FAST ==  Ts = 2.05 ms, préambule total 41.5 ms
+  sans balayage « occupé » chez le récepteur pendant la trame : 0 perdues sur 2204
+  avec au moins un balayage « occupé » pendant la trame      : 7 perdues sur 218
+    1er balayage entre +1 et +2 symboles (2 à 4 ms) : 0 perdues sur 27
+    1er balayage entre +2 et +4 symboles (4 à 8 ms) : 1 perdues sur 61
+    1er balayage entre +4 et +8 symboles (8 à 16 ms) : 5 perdues sur 101
+    1er balayage entre +8 et +16 symboles (16 à 33 ms) : 1 perdues sur 17
+    1 balayage « occupé » pendant la trame : 0 perdues sur 197
+    2 balayages « occupé » pendant la trame : 2 perdues sur 16
+    3 balayages ou plus « occupé » pendant la trame : 5 perdues sur 5
+  selon le préambule RESTANT (en symboles) au DERNIER balayage « occupé » tombé pendant le préambule :
+    reste moins de 5 symboles : 2 perdues sur 2
+    reste 5 à 6,5 symboles : 5 perdues sur 5
+    reste 6,5 à 7,5 symboles : 0 perdues sur 3
+    reste 7,5 à 10 symboles : 0 perdues sur 7
+    reste 10 et plus symboles : 0 perdues sur 201
+  écart entre deux balayages « occupé » successifs de la même trame (< 82 ms) : 25 mesures, min 10.0, médiane 14.8, max 76.4 ms
+    1er balayage dans le 1er symbole : 0 perdues sur 12
+    réception précédente finie depuis 0 à 100 ms : 6 perdues sur 66
+    réception précédente finie depuis 100 à 500 ms : 0 perdues sur 87
+    réception précédente finie depuis 500 à 5000 ms : 1 perdues sur 64
+  sans balayage occupé mais avec une attente « radio en réception » du récepteur : 0 perdues sur 1201
+
+== Événements CAD du journal (firmware d'essai v8) : 4 essais ==
+- 2026-11-19-validation-v7/journals/i1-saturation-17B-mediumfast-window-plus0-bits-cad (MEDIUM_FAST)
+  boîtier 1 : occupés : 24 balayages, durée min 9.3 / médiane 9.4 / max 11.4 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.3 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 24 sur 24 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 8 mesures, min 0.9 / médiane 51.8 / max 97.4 ms
+  boîtier 2 : occupés : 22 balayages, durée min 9.3 / médiane 9.4 / max 11.4 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.4 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 22 sur 22 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 6 mesures, min 0.8 / médiane 33.9 / max 80.6 ms
+- 2026-11-19-validation-v7/journals/i2-saturation-17B-mediumfast-window-plus2-bits-cad (MEDIUM_FAST)
+  boîtier 1 : occupés : 13 balayages, durée min 9.3 / médiane 9.4 / max 11.4 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.4 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 13 sur 13 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 2 mesures, min 16.7 / médiane 52.1 / max 52.1 ms
+  boîtier 2 : occupés : 15 balayages, durée min 9.3 / médiane 9.4 / max 11.5 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.4 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 15 sur 15 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 1 mesures, min 63.7 / médiane 63.7 / max 63.7 ms
+- 2026-11-19-validation-v7/journals/i3-saturation-17B-mediumfast-window-plus0-bits-cad (MEDIUM_FAST)
+  boîtier 1 : occupés : 23 balayages, durée min 9.3 / médiane 9.4 / max 11.5 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.4 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 23 sur 23 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 8 mesures, min 3.4 / médiane 32.6 / max 49.0 ms
+  boîtier 2 : occupés : 20 balayages, durée min 9.3 / médiane 9.4 / max 11.4 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.4 ms
+    état avant le balayage (occupés) : maintien du préambule 1, balayage de lecture 1, réception armée 20 sur 20 ; (libres) : maintien 1, lecture 1, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 3 mesures, min 3.4 / médiane 17.0 / max 51.3 ms
+- 2026-11-19-validation-v7/journals/i4-saturation-17B-mediumfast-window-plus2-bits-cad (MEDIUM_FAST)
+  boîtier 1 : occupés : 12 balayages, durée min 9.3 / médiane 9.4 / max 11.4 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.3 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 12 sur 12 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 4 mesures, min 33.3 / médiane 48.6 / max 80.4 ms
+  boîtier 2 : occupés : 20 balayages, durée min 9.3 / médiane 9.4 / max 11.4 ms ; libres : 81 balayages, durée min 9.2 / médiane 9.3 / max 11.4 ms
+    état avant le balayage (occupés) : maintien du préambule 0, balayage de lecture 0, réception armée 20 sur 20 ; (libres) : maintien 0, lecture 0, réception armée 81 sur 81
+    pause entre la fin d'un balayage OCCUPÉ et le début du suivant (< 100 ms) : 4 mesures, min 33.7 / médiane 51.1 / max 81.2 ms

@@ -1,0 +1,155 @@
+[
+ {
+  "run": "f1-saturation-17B-mediumfast-default-window",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, no pause; test build v7 at its default setting (contention window +2 bits for data frames, no setting order sent)",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 70,
+  "collisions": 1
+ },
+ {
+  "run": "f2-saturation-17B-mediumfast-default-window",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, no pause; test build v7 at its default setting (contention window +2 bits for data frames, no setting order sent)",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 61,
+  "collisions": 0
+ },
+ {
+  "run": "f3-saturation-17B-mediumfast-default-window",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, no pause; test build v7 at its default setting (contention window +2 bits for data frames, no setting order sent)",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 57,
+  "collisions": 1
+ },
+ {
+  "run": "g1-duplex-2KB-window-plus2-bits-longfast",
+  "preset": "LONG_FAST",
+  "description": "both boards send a 2,048-byte file to each other at the same time, contention window +2 bits for data frames",
+  "frames_board1": 17,
+  "frames_board2": 17,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "g2-duplex-2KB-window-plus0-bits-longfast",
+  "preset": "LONG_FAST",
+  "description": "both boards send a 2,048-byte file to each other at the same time, contention window +0 bits for data frames",
+  "frames_board1": 17,
+  "frames_board2": 17,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "g3-duplex-2KB-window-plus2-bits-longfast",
+  "preset": "LONG_FAST",
+  "description": "both boards send a 2,048-byte file to each other at the same time, contention window +2 bits for data frames (started 14 s after the end of the previous run instead of 10 min or more: a script error on our side; the run itself is valid)",
+  "frames_board1": 17,
+  "frames_board2": 17,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "g4-duplex-2KB-window-plus0-bits-longfast",
+  "preset": "LONG_FAST",
+  "description": "both boards send a 2,048-byte file to each other at the same time, contention window +0 bits for data frames",
+  "frames_board1": 17,
+  "frames_board2": 17,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "g5-duplex-2KB-window-plus2-bits-longfast",
+  "preset": "LONG_FAST",
+  "description": "both boards send a 2,048-byte file to each other at the same time, contention window +2 bits for data frames",
+  "frames_board1": 17,
+  "frames_board2": 17,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "g6-duplex-2KB-window-plus0-bits-longfast",
+  "preset": "LONG_FAST",
+  "description": "both boards send a 2,048-byte file to each other at the same time, contention window +0 bits for data frames",
+  "frames_board1": 17,
+  "frames_board2": 17,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "h1-priority-on-deep-queue-longfast",
+  "preset": "LONG_FAST",
+  "description": "control-frame priority ON (production setting), board 2 has a 12-frame burst of 219 B in its queue, board 1 sends a 1,024-byte file 42 s later",
+  "frames_board1": 8,
+  "frames_board2": 16,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "h2-priority-off-deep-queue-longfast",
+  "preset": "LONG_FAST",
+  "description": "same without control-frame priority on board 2 (test option), 12-frame burst ahead of its ready frame",
+  "frames_board1": 11,
+  "frames_board2": 21,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "h3-priority-on-deep-queue-longfast",
+  "preset": "LONG_FAST",
+  "description": "repeat of h1 (priority ON)",
+  "frames_board1": 10,
+  "frames_board2": 18,
+  "strict_conflicts": 1,
+  "collisions": 0
+ },
+ {
+  "run": "h4-priority-off-deep-queue-longfast",
+  "preset": "LONG_FAST",
+  "description": "repeat of h2 (priority OFF)",
+  "frames_board1": 10,
+  "frames_board2": 19,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "i1-saturation-17B-mediumfast-window-plus0-bits-cad",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 80 frames of 17 B per board, no pause, contention window +0 bits for data frames; test build v8b with CAD scan events",
+  "frames_board1": 81,
+  "frames_board2": 81,
+  "strict_conflicts": 138,
+  "collisions": 6
+ },
+ {
+  "run": "i2-saturation-17B-mediumfast-window-plus2-bits-cad",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 80 frames of 17 B per board, no pause, contention window +2 bits for data frames; test build v8b with CAD scan events",
+  "frames_board1": 81,
+  "frames_board2": 81,
+  "strict_conflicts": 72,
+  "collisions": 1
+ },
+ {
+  "run": "i3-saturation-17B-mediumfast-window-plus0-bits-cad",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 80 frames of 17 B per board, no pause, contention window +0 bits for data frames; test build v8b with CAD scan events",
+  "frames_board1": 81,
+  "frames_board2": 81,
+  "strict_conflicts": 148,
+  "collisions": 7
+ },
+ {
+  "run": "i4-saturation-17B-mediumfast-window-plus2-bits-cad",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 80 frames of 17 B per board, no pause, contention window +2 bits for data frames; test build v8b with CAD scan events",
+  "frames_board1": 81,
+  "frames_board2": 81,
+  "strict_conflicts": 79,
+  "collisions": 3
+ }
+]

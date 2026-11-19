@@ -1,0 +1,30 @@
+== Boîtier A board-1 ==
+émissions : 17 (17 avec durée mesurée) ; temps d'émission mesuré 26503 ms, calculé (Semtech) 26503 ms, annoncé par le firmware 26495 ms ; écart mesuré/calculé +0.00 %
+écart par trame (mesuré − calculé) : 17 mesures, médiane -0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 17 mesures, médiane 2648.9, p95 17081.0, max 17081.0 ms
+émissions repoussées : radio en réception ×13, canal occupé (CAD) ×1
+pause entre deux émissions d'une même rafale : 7 mesures, médiane 2027.4, p95 3098.0, max 3098.0 ms
+reçus : 17 bons, 0 en erreur ; interruptions : 17 d'émission, 18 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 21.1 % d'une fenêtre de 125.7 s
+réglages d'essai reçus : W = 2  (W : bits de fenêtre de contention en plus pour les données)
+ATTENTION : 17 paquets sortis de la radio pour 18 interruptions de réception : appariement par numéro (une interruption peut être un préambule, pas une fin de réception)
+== Boîtier B board-2 ==
+émissions : 17 (17 avec durée mesurée) ; temps d'émission mesuré 26503 ms, calculé (Semtech) 26503 ms, annoncé par le firmware 26495 ms ; écart mesuré/calculé -0.00 %
+écart par trame (mesuré − calculé) : 17 mesures, médiane -0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 17 mesures, médiane 2993.1, p95 10380.1, max 10380.1 ms
+émissions repoussées : canal occupé (CAD) ×4, radio en réception ×13
+pause entre deux émissions d'une même rafale : 9 mesures, médiane 3316.5, p95 4371.6, max 4371.6 ms
+reçus : 17 bons, 0 en erreur ; interruptions : 17 d'émission, 18 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 21.2 % d'une fenêtre de 125.2 s
+réglages d'essai reçus : W = 2  (W : bits de fenêtre de contention en plus pour les données)
+ATTENTION : 17 paquets sortis de la radio pour 18 interruptions de réception : appariement par numéro (une interruption peut être un préambule, pas une fin de réception)
+
+== Calage des horloges == 34 paquets communs (deux sens), dérive -0.3 ppm, résidu médian 0.02 ms, max 0.07 ms, retard de traitement 6.98 ms
+== Trames A → B == 17 émises : 17 reçues, 0 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+== Trames B → A == 17 émises : 17 reçues, 0 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+== Réponses courtes de B pendant la rafale de A (BILAN, point d'étape…) ==
+   à 1.2 s : 42 octets, 559 ms d'antenne, attente avant départ 652 ms
+   à 3.4 s : 27 octets, 436 ms d'antenne, attente avant départ 386 ms
+== Réponses courtes de A pendant la rafale de B (BILAN, point d'étape…) ==
+   à 0.9 s : 27 octets, 436 ms d'antenne, attente avant départ 38 ms
+   à 104.3 s : 33 octets, 477 ms d'antenne, attente avant départ 2649 ms

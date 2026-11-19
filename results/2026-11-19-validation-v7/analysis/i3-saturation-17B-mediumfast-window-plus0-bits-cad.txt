@@ -1,0 +1,196 @@
+== Boîtier A board-1 ==
+émissions : 81 (81 avec durée mesurée) ; temps d'émission mesuré 13013 ms, calculé (Semtech) 13011 ms, annoncé par le firmware 12990 ms ; écart mesuré/calculé +0.01 %
+écart par trame (mesuré − calculé) : 81 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 81 mesures, médiane 6884.6, p95 8865.9, max 9460.7 ms
+émissions repoussées : émission en cours ×114, radio en réception ×132, canal occupé (CAD) ×23
+pause entre deux émissions d'une même rafale : 80 mesures, médiane 244.8, p95 797.3, max 2094.9 ms
+reçus : 74 bons, 0 en erreur ; interruptions : 81 d'émission, 74 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 31.0 % d'une fenêtre de 42.0 s
+réglages d'essai reçus : W = 0  (W : bits de fenêtre de contention en plus pour les données)
+== Boîtier B board-2 ==
+émissions : 81 (81 avec durée mesurée) ; temps d'émission mesuré 13013 ms, calculé (Semtech) 13011 ms, annoncé par le firmware 12990 ms ; écart mesuré/calculé +0.01 %
+écart par trame (mesuré − calculé) : 81 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 81 mesures, médiane 6493.1, p95 8447.8, max 9007.1 ms
+émissions repoussées : radio en réception ×109, émission en cours ×118, canal occupé (CAD) ×20
+pause entre deux émissions d'une même rafale : 79 mesures, médiane 210.5, p95 801.6, max 1534.0 ms
+reçus : 73 bons, 0 en erreur ; interruptions : 81 d'émission, 73 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 31.1 % d'une fenêtre de 41.8 s
+réglages d'essai reçus : W = 0  (W : bits de fenêtre de contention en plus pour les données)
+
+== Calage des horloges == 147 paquets communs (deux sens), dérive -0.6 ppm, résidu médian 0.01 ms, max 0.06 ms, retard de traitement 1.33 ms
+== Trames A → B == 81 émises : 73 reçues, 7 perdues par surdité (le récepteur émettait), 0 abîmées, 1 perdues sans cause vue
+   sourde : id 0xd74e08b6, recouvrement 159 ms (début de la trame), le récepteur émettait 40 octets
+   sourde : id 0x214554b7, recouvrement 158 ms (début de la trame), le récepteur émettait 40 octets
+   sourde : id 0xe008f4ba, recouvrement 155 ms (début de la trame), le récepteur émettait 40 octets
+   sourde : id 0x5493dd39, recouvrement 155 ms (début de la trame), le récepteur émettait 40 octets
+   sourde : id 0x4b19e396, recouvrement 160 ms (fin de la trame), le récepteur émettait 40 octets
+   sourde : id 0x796363a9, recouvrement 156 ms (fin de la trame), le récepteur émettait 40 octets
+   sourde : id 0xafb7540e, recouvrement 156 ms (fin de la trame), le récepteur émettait 40 octets
+== Trames B → A == 81 émises : 74 reçues, 7 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+   sourde : id 0x97fd7d07, recouvrement 159 ms (fin de la trame), le récepteur émettait 40 octets
+   sourde : id 0x113a0509, recouvrement 158 ms (fin de la trame), le récepteur émettait 40 octets
+   sourde : id 0x3c24650f, recouvrement 155 ms (fin de la trame), le récepteur émettait 40 octets
+   sourde : id 0x8c445f16, recouvrement 155 ms (fin de la trame), le récepteur émettait 40 octets
+   sourde : id 0x72ff840b, recouvrement 160 ms (début de la trame), le récepteur émettait 40 octets
+   sourde : id 0x641b8a81, recouvrement 156 ms (début de la trame), le récepteur émettait 40 octets
+   sourde : id 0xe4a17ca9, recouvrement 156 ms (début de la trame), le récepteur émettait 40 octets
+== Réponses courtes de B pendant la rafale de A (BILAN, point d'étape…) ==
+   à 0.5 s : 40 octets, 160 ms d'antenne, attente avant départ 169 ms
+   à 0.9 s : 40 octets, 160 ms d'antenne, attente avant départ 611 ms
+   à 1.2 s : 40 octets, 160 ms d'antenne, attente avant départ 868 ms
+   à 1.6 s : 40 octets, 160 ms d'antenne, attente avant départ 1269 ms
+   à 2.0 s : 40 octets, 160 ms d'antenne, attente avant départ 1665 ms
+   à 2.2 s : 40 octets, 160 ms d'antenne, attente avant départ 1859 ms
+   à 2.4 s : 40 octets, 160 ms d'antenne, attente avant départ 2036 ms
+   à 2.6 s : 40 octets, 160 ms d'antenne, attente avant départ 2327 ms
+   à 2.9 s : 40 octets, 160 ms d'antenne, attente avant départ 2535 ms
+   à 3.1 s : 40 octets, 160 ms d'antenne, attente avant départ 2729 ms
+   à 3.3 s : 40 octets, 160 ms d'antenne, attente avant départ 3009 ms
+   à 3.6 s : 40 octets, 160 ms d'antenne, attente avant départ 3296 ms
+   à 3.8 s : 40 octets, 160 ms d'antenne, attente avant départ 3489 ms
+   à 4.3 s : 40 octets, 160 ms d'antenne, attente avant départ 3916 ms
+   à 4.7 s : 40 octets, 160 ms d'antenne, attente avant départ 4374 ms
+   à 5.0 s : 40 octets, 160 ms d'antenne, attente avant départ 4615 ms
+   à 5.2 s : 40 octets, 160 ms d'antenne, attente avant départ 4675 ms
+   à 5.3 s : 40 octets, 160 ms d'antenne, attente avant départ 4413 ms
+   à 5.8 s : 40 octets, 160 ms d'antenne, attente avant départ 4587 ms
+   à 6.2 s : 40 octets, 160 ms d'antenne, attente avant départ 4629 ms
+   à 6.4 s : 40 octets, 160 ms d'antenne, attente avant départ 4427 ms
+   à 7.0 s : 40 octets, 160 ms d'antenne, attente avant départ 4796 ms
+   à 7.2 s : 40 octets, 160 ms d'antenne, attente avant départ 4843 ms
+   à 8.1 s : 40 octets, 160 ms d'antenne, attente avant départ 5426 ms
+   à 8.3 s : 40 octets, 160 ms d'antenne, attente avant départ 5443 ms
+   à 8.7 s : 40 octets, 160 ms d'antenne, attente avant départ 5678 ms
+   à 8.9 s : 40 octets, 160 ms d'antenne, attente avant départ 5575 ms
+   à 9.1 s : 40 octets, 160 ms d'antenne, attente avant départ 5479 ms
+   à 9.8 s : 40 octets, 160 ms d'antenne, attente avant départ 5966 ms
+   à 10.0 s : 40 octets, 160 ms d'antenne, attente avant départ 5732 ms
+   à 10.2 s : 40 octets, 160 ms d'antenne, attente avant départ 5467 ms
+   à 10.7 s : 40 octets, 160 ms d'antenne, attente avant départ 5737 ms
+   à 11.5 s : 40 octets, 160 ms d'antenne, attente avant départ 6318 ms
+   à 11.7 s : 40 octets, 160 ms d'antenne, attente avant départ 6382 ms
+   à 12.1 s : 40 octets, 160 ms d'antenne, attente avant départ 6319 ms
+   à 12.3 s : 40 octets, 160 ms d'antenne, attente avant départ 6068 ms
+   à 13.0 s : 40 octets, 160 ms d'antenne, attente avant départ 6633 ms
+   à 13.5 s : 40 octets, 160 ms d'antenne, attente avant départ 6493 ms
+   à 13.7 s : 40 octets, 160 ms d'antenne, attente avant départ 6493 ms
+   à 14.3 s : 40 octets, 160 ms d'antenne, attente avant départ 6243 ms
+   à 14.7 s : 40 octets, 160 ms d'antenne, attente avant départ 6394 ms
+   à 15.1 s : 40 octets, 160 ms d'antenne, attente avant départ 6333 ms
+   à 15.5 s : 40 octets, 160 ms d'antenne, attente avant départ 6554 ms
+   à 16.4 s : 40 octets, 160 ms d'antenne, attente avant départ 7261 ms
+   à 16.9 s : 40 octets, 160 ms d'antenne, attente avant départ 7128 ms
+   à 17.1 s : 40 octets, 160 ms d'antenne, attente avant départ 7114 ms
+   à 18.3 s : 40 octets, 160 ms d'antenne, attente avant départ 8061 ms
+   à 18.5 s : 40 octets, 160 ms d'antenne, attente avant départ 7762 ms
+   à 18.7 s : 40 octets, 160 ms d'antenne, attente avant départ 7232 ms
+   à 19.5 s : 40 octets, 160 ms d'antenne, attente avant départ 7763 ms
+   à 20.0 s : 40 octets, 160 ms d'antenne, attente avant départ 7890 ms
+   à 20.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8658 ms
+   à 21.1 s : 40 octets, 160 ms d'antenne, attente avant départ 8091 ms
+   à 21.4 s : 40 octets, 160 ms d'antenne, attente avant départ 7880 ms
+   à 21.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8179 ms
+   à 22.2 s : 40 octets, 160 ms d'antenne, attente avant départ 7910 ms
+   à 22.7 s : 40 octets, 160 ms d'antenne, attente avant départ 8010 ms
+   à 23.1 s : 40 octets, 160 ms d'antenne, attente avant départ 7980 ms
+   à 23.6 s : 40 octets, 160 ms d'antenne, attente avant départ 8141 ms
+   à 23.9 s : 40 octets, 160 ms d'antenne, attente avant départ 7521 ms
+   à 25.4 s : 40 octets, 160 ms d'antenne, attente avant départ 8448 ms
+   à 26.1 s : 40 octets, 160 ms d'antenne, attente avant départ 9007 ms
+   à 26.3 s : 40 octets, 160 ms d'antenne, attente avant départ 8058 ms
+   à 26.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8422 ms
+   à 27.2 s : 40 octets, 160 ms d'antenne, attente avant départ 8480 ms
+   à 27.6 s : 40 octets, 160 ms d'antenne, attente avant départ 8134 ms
+   à 28.0 s : 40 octets, 160 ms d'antenne, attente avant départ 7974 ms
+   à 28.2 s : 40 octets, 160 ms d'antenne, attente avant départ 7204 ms
+   à 29.0 s : 40 octets, 160 ms d'antenne, attente avant départ 7897 ms
+   à 29.3 s : 40 octets, 160 ms d'antenne, attente avant départ 7907 ms
+   à 29.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8052 ms
+   à 30.6 s : 40 octets, 160 ms d'antenne, attente avant départ 8394 ms
+   à 31.2 s : 40 octets, 160 ms d'antenne, attente avant départ 8530 ms
+   à 31.5 s : 40 octets, 160 ms d'antenne, attente avant départ 8413 ms
+   à 31.7 s : 40 octets, 160 ms d'antenne, attente avant départ 8043 ms
+   à 32.2 s : 40 octets, 160 ms d'antenne, attente avant départ 8238 ms
+   à 32.6 s : 40 octets, 160 ms d'antenne, attente avant départ 7183 ms
+   à 34.3 s : 40 octets, 160 ms d'antenne, attente avant départ 8137 ms
+   à 34.6 s : 40 octets, 160 ms d'antenne, attente avant départ 8310 ms
+   à 35.0 s : 40 octets, 160 ms d'antenne, attente avant départ 8133 ms
+== Réponses courtes de A pendant la rafale de B (BILAN, point d'étape…) ==
+   à -0.5 s : 40 octets, 160 ms d'antenne, attente avant départ 96 ms
+   à -0.2 s : 40 octets, 160 ms d'antenne, attente avant départ 350 ms
+   à 0.2 s : 40 octets, 160 ms d'antenne, attente avant départ 779 ms
+   à 0.9 s : 40 octets, 160 ms d'antenne, attente avant départ 1454 ms
+   à 1.3 s : 40 octets, 160 ms d'antenne, attente avant départ 1850 ms
+   à 2.2 s : 40 octets, 160 ms d'antenne, attente avant départ 2733 ms
+   à 2.6 s : 40 octets, 160 ms d'antenne, attente avant départ 3139 ms
+   à 3.5 s : 40 octets, 160 ms d'antenne, attente avant départ 4087 ms
+   à 4.0 s : 40 octets, 160 ms d'antenne, attente avant départ 4545 ms
+   à 4.5 s : 40 octets, 160 ms d'antenne, attente avant départ 5036 ms
+   à 5.1 s : 40 octets, 160 ms d'antenne, attente avant départ 5650 ms
+   à 5.5 s : 40 octets, 160 ms d'antenne, attente avant départ 6033 ms
+   à 6.1 s : 40 octets, 160 ms d'antenne, attente avant départ 6660 ms
+   à 6.3 s : 40 octets, 160 ms d'antenne, attente avant départ 6837 ms
+   à 6.9 s : 40 octets, 160 ms d'antenne, attente avant départ 7446 ms
+   à 7.1 s : 40 octets, 160 ms d'antenne, attente avant départ 7657 ms
+   à 7.4 s : 40 octets, 160 ms d'antenne, attente avant départ 7842 ms
+   à 8.1 s : 40 octets, 160 ms d'antenne, attente avant départ 8262 ms
+   à 8.6 s : 40 octets, 160 ms d'antenne, attente avant départ 8425 ms
+   à 8.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8023 ms
+   à 9.1 s : 40 octets, 160 ms d'antenne, attente avant départ 7837 ms
+   à 10.0 s : 40 octets, 160 ms d'antenne, attente avant départ 7828 ms
+   à 10.5 s : 40 octets, 160 ms d'antenne, attente avant départ 7924 ms
+   à 10.8 s : 40 octets, 160 ms d'antenne, attente avant départ 7216 ms
+   à 11.0 s : 40 octets, 160 ms d'antenne, attente avant départ 7000 ms
+   à 11.4 s : 40 octets, 160 ms d'antenne, attente avant départ 6936 ms
+   à 12.0 s : 40 octets, 160 ms d'antenne, attente avant départ 6885 ms
+   à 12.2 s : 40 octets, 160 ms d'antenne, attente avant départ 6679 ms
+   à 12.4 s : 40 octets, 160 ms d'antenne, attente avant départ 6260 ms
+   à 12.8 s : 40 octets, 160 ms d'antenne, attente avant départ 6510 ms
+   à 13.4 s : 40 octets, 160 ms d'antenne, attente avant départ 6524 ms
+   à 13.6 s : 40 octets, 160 ms d'antenne, attente avant départ 6490 ms
+   à 14.0 s : 40 octets, 160 ms d'antenne, attente avant départ 6666 ms
+   à 14.4 s : 40 octets, 160 ms d'antenne, attente avant départ 6362 ms
+   à 14.8 s : 40 octets, 160 ms d'antenne, attente avant départ 6139 ms
+   à 15.2 s : 40 octets, 160 ms d'antenne, attente avant départ 6325 ms
+   à 15.5 s : 40 octets, 160 ms d'antenne, attente avant départ 6324 ms
+   à 15.7 s : 40 octets, 160 ms d'antenne, attente avant départ 5663 ms
+   à 15.9 s : 40 octets, 160 ms d'antenne, attente avant départ 5383 ms
+   à 16.1 s : 40 octets, 160 ms d'antenne, attente avant départ 5383 ms
+   à 16.8 s : 40 octets, 160 ms d'antenne, attente avant départ 5809 ms
+   à 17.1 s : 40 octets, 160 ms d'antenne, attente avant départ 5625 ms
+   à 17.2 s : 40 octets, 160 ms d'antenne, attente avant départ 5236 ms
+   à 17.5 s : 40 octets, 160 ms d'antenne, attente avant départ 5286 ms
+   à 18.4 s : 40 octets, 160 ms d'antenne, attente avant départ 6033 ms
+   à 18.7 s : 40 octets, 160 ms d'antenne, attente avant départ 5914 ms
+   à 19.3 s : 40 octets, 160 ms d'antenne, attente avant départ 5879 ms
+   à 19.7 s : 40 octets, 160 ms d'antenne, attente avant départ 6102 ms
+   à 20.0 s : 40 octets, 160 ms d'antenne, attente avant départ 5925 ms
+   à 20.2 s : 40 octets, 160 ms d'antenne, attente avant départ 5778 ms
+   à 21.1 s : 40 octets, 160 ms d'antenne, attente avant départ 6322 ms
+   à 22.0 s : 40 octets, 160 ms d'antenne, attente avant départ 6764 ms
+   à 22.8 s : 40 octets, 160 ms d'antenne, attente avant départ 7323 ms
+   à 23.7 s : 40 octets, 160 ms d'antenne, attente avant départ 7991 ms
+   à 24.0 s : 40 octets, 160 ms d'antenne, attente avant départ 8087 ms
+   à 24.2 s : 40 octets, 160 ms d'antenne, attente avant départ 8044 ms
+   à 24.5 s : 40 octets, 160 ms d'antenne, attente avant départ 7688 ms
+   à 25.2 s : 40 octets, 160 ms d'antenne, attente avant départ 8169 ms
+   à 25.5 s : 40 octets, 160 ms d'antenne, attente avant départ 8214 ms
+   à 26.1 s : 40 octets, 160 ms d'antenne, attente avant départ 8584 ms
+   à 26.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8510 ms
+   à 27.9 s : 40 octets, 160 ms d'antenne, attente avant départ 9156 ms
+   à 28.2 s : 40 octets, 160 ms d'antenne, attente avant départ 8867 ms
+   à 28.4 s : 40 octets, 160 ms d'antenne, attente avant départ 8642 ms
+   à 29.2 s : 40 octets, 160 ms d'antenne, attente avant départ 9208 ms
+   à 29.7 s : 40 octets, 160 ms d'antenne, attente avant départ 9461 ms
+   à 30.0 s : 40 octets, 160 ms d'antenne, attente avant départ 8866 ms
+   à 30.4 s : 40 octets, 160 ms d'antenne, attente avant départ 8369 ms
+   à 31.5 s : 40 octets, 160 ms d'antenne, attente avant départ 8695 ms
+   à 31.9 s : 40 octets, 160 ms d'antenne, attente avant départ 8236 ms
+   à 32.1 s : 40 octets, 160 ms d'antenne, attente avant départ 8088 ms
+   à 32.3 s : 40 octets, 160 ms d'antenne, attente avant départ 8117 ms
+   à 32.7 s : 40 octets, 160 ms d'antenne, attente avant départ 8164 ms
+   à 33.0 s : 40 octets, 160 ms d'antenne, attente avant départ 7791 ms
+   à 33.4 s : 40 octets, 160 ms d'antenne, attente avant départ 7921 ms
+   à 34.8 s : 40 octets, 160 ms d'antenne, attente avant départ 8773 ms
+   à 35.1 s : 40 octets, 160 ms d'antenne, attente avant départ 8206 ms
+   à 35.5 s : 40 octets, 160 ms d'antenne, attente avant départ 7653 ms

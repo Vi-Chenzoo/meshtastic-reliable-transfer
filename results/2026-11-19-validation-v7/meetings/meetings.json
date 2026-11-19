@@ -1,0 +1,162 @@
+[
+ {
+  "meeting": "m1-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 4.205528,
+  "new_board_knows_old_after_s": 4.261778,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m2-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 3.806878,
+  "new_board_knows_old_after_s": 45.856202,
+  "hellos_sent_old_board": 1,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 1
+ },
+ {
+  "meeting": "m3-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 4.049094,
+  "new_board_knows_old_after_s": 3.5863,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m4-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 2.72399,
+  "new_board_knows_old_after_s": 49.234715,
+  "hellos_sent_old_board": 1,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 1
+ },
+ {
+  "meeting": "m5-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 3.3775,
+  "new_board_knows_old_after_s": 3.048933,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m6-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 4.790518,
+  "new_board_knows_old_after_s": 50.043219,
+  "hellos_sent_old_board": 1,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 1
+ },
+ {
+  "meeting": "m7-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 4.631329,
+  "new_board_knows_old_after_s": 4.676224,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m8-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 3.047285,
+  "new_board_knows_old_after_s": 53.030602,
+  "hellos_sent_old_board": 1,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 1
+ },
+ {
+  "meeting": "m9-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 4.472492,
+  "new_board_knows_old_after_s": 4.189503,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m10-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 3.609124,
+  "new_board_knows_old_after_s": null,
+  "hellos_sent_old_board": 1,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 0
+ },
+ {
+  "meeting": "m11-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 4.6846,
+  "new_board_knows_old_after_s": 4.657286,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m12-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 4.080204,
+  "new_board_knows_old_after_s": 25.906214,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m13-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 2.552597,
+  "new_board_knows_old_after_s": 1.782454,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m14-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 3.077707,
+  "new_board_knows_old_after_s": null,
+  "hellos_sent_old_board": 1,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 0
+ },
+ {
+  "meeting": "m15-reply-on",
+  "reply_to_new_neighbour": true,
+  "old_board_knows_new_after_s": 2.761549,
+  "new_board_knows_old_after_s": 2.788383,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ },
+ {
+  "meeting": "m16-reply-off",
+  "reply_to_new_neighbour": false,
+  "old_board_knows_new_after_s": 2.939338,
+  "new_board_knows_old_after_s": 5.336023,
+  "hellos_sent_old_board": 2,
+  "hellos_sent_new_board": 2,
+  "hellos_received_old_board": 2,
+  "hellos_received_new_board": 2
+ }
+]

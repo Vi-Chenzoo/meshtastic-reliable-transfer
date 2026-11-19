@@ -1,0 +1,12 @@
+== Boîtier A board-1 ==
+  ordre : oublier seulement ; réponse de rencontre : oui
+  connaît l'autre 4.68 s après son ordre (bonjour reçu = rencontre)
+  bonjours émis : +5.98 s (111.2 ms), +67.25 s (111.3 ms)
+  bonjour reçu +4.68 s : vérification 175.0 ms, valide, rencontre, réponse programmée
+  bonjour reçu +65.93 s : vérification 175.1 ms, valide
+== Boîtier B board-2 ==
+  ordre : oublier et dire bonjour ; réponse de rencontre : oui (défaut)
+  connaît l'autre 4.66 s après son ordre (bonjour reçu = rencontre)
+  bonjours émis : +2.97 s (111.3 ms), +64.23 s (111.3 ms)
+  bonjour reçu +4.66 s : vérification 178.7 ms, valide, rencontre, réponse refusée
+  bonjour reçu +65.90 s : vérification 173.2 ms, valide

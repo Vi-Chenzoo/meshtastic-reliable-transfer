@@ -1,0 +1,25 @@
+== Boîtier A board-1 ==
+émissions : 11 (11 avec durée mesurée) ; temps d'émission mesuré 14793 ms, calculé (Semtech) 14793 ms, annoncé par le firmware 14787 ms ; écart mesuré/calculé -0.00 %
+écart par trame (mesuré − calculé) : 11 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 11 mesures, médiane 3636.5, p95 10680.7, max 10680.7 ms
+émissions repoussées : radio en réception ×14, canal occupé (CAD) ×3
+pause entre deux émissions d'une même rafale : 4 mesures, médiane 3148.4, p95 4891.3, max 4891.3 ms
+reçus : 21 bons, 0 en erreur ; interruptions : 11 d'émission, 21 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 11.9 % d'une fenêtre de 124.8 s
+== Boîtier B board-2 ==
+émissions : 21 (21 avec durée mesurée) ; temps d'émission mesuré 29067 ms, calculé (Semtech) 29067 ms, annoncé par le firmware 29058 ms ; écart mesuré/calculé +0.00 %
+écart par trame (mesuré − calculé) : 21 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 21 mesures, médiane 14332.2, p95 44239.9, max 44441.2 ms
+émissions repoussées : radio en réception ×3
+pause entre deux émissions d'une même rafale : 14 mesures, médiane 1981.4, p95 3781.4, max 3781.4 ms
+reçus : 11 bons, 0 en erreur ; interruptions : 21 d'émission, 11 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 23.2 % d'une fenêtre de 125.2 s
+
+== Calage des horloges == 32 paquets communs (deux sens), dérive -0.8 ppm, résidu médian 0.02 ms, max 0.06 ms, retard de traitement 6.99 ms
+== Trames A → B == 11 émises : 11 reçues, 0 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+== Trames B → A == 21 émises : 21 reçues, 0 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+== Réponses courtes de A pendant la rafale de B (BILAN, point d'étape…) ==
+   à 34.8 s : 63 octets, 723 ms d'antenne, attente avant départ 8052 ms
+   à 43.2 s : 42 octets, 559 ms d'antenne, attente avant départ 880 ms
+   à 56.9 s : 24 octets, 436 ms d'antenne, attente avant départ 346 ms
+   à 70.0 s : 42 octets, 559 ms d'antenne, attente avant départ 7147 ms

@@ -1,0 +1,1 @@
+0 conflits (les deux boîtiers repartent dans la seconde qui suit une fin de trame), 0 collisions ; émissions A 10, B 19 ; calage : 29 paquets, résidu max 0.05 ms

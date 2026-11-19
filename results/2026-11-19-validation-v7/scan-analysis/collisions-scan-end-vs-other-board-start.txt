@@ -1,0 +1,22 @@
+essai  écart des départs (B−A) | boîtier A : délai fin-balayage→départ ; fin du balayage par rapport au départ de B | boîtier B : idem
+i1-saturation-17B-mediumfast-window-plus0-bits-cad    +4.1 ms |  3.64 ;   -7.7 |  3.67 ;   +0.4
+i1-saturation-17B-mediumfast-window-plus0-bits-cad    -4.8 ms |  3.66 ;   +1.2 |  3.68 ;   -8.5
+i1-saturation-17B-mediumfast-window-plus0-bits-cad    -0.8 ms |  3.66 ;   -2.8 |  3.67 ;   -4.5
+i1-saturation-17B-mediumfast-window-plus0-bits-cad    +0.2 ms |  3.67 ;   -3.9 |  3.66 ;   -3.5
+i1-saturation-17B-mediumfast-window-plus0-bits-cad    +0.6 ms |  3.65 ;   -4.3 |  3.65 ;   -3.0
+i1-saturation-17B-mediumfast-window-plus0-bits-cad    -4.9 ms |  3.64 ;   +1.2 |  3.64 ;   -8.5
+i2-saturation-17B-mediumfast-window-plus2-bits-cad    +2.1 ms |  3.65 ;   -5.8 |  3.68 ;   -1.5
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    -1.3 ms |  3.66 ;   -2.4 |  3.66 ;   -4.9
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    -2.3 ms |  3.67 ;   -1.3 |  3.66 ;   -6.0
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    -5.2 ms |  3.66 ;   +1.5 |  3.66 ;   -8.9
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    -5.1 ms |  3.65 ;   +1.5 |  3.65 ;   -8.8
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    +0.3 ms |  3.71 ;   -4.0 |  3.65 ;   -3.3
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    +3.9 ms |  3.70 ;   -7.6 |  3.66 ;   +0.3
+i3-saturation-17B-mediumfast-window-plus0-bits-cad    +4.6 ms |  3.64 ;   -8.2 |  3.63 ;   +1.0
+i4-saturation-17B-mediumfast-window-plus2-bits-cad    +1.9 ms |  3.66 ;   -5.6 |  3.68 ;   -1.8
+i4-saturation-17B-mediumfast-window-plus2-bits-cad    +4.1 ms |  3.68 ;   -7.8 |  3.67 ;   +0.4
+i4-saturation-17B-mediumfast-window-plus2-bits-cad    -1.6 ms |  3.72 ;   -2.2 |  3.67 ;   -5.2
+
+17 collisions. Délai fin du dernier balayage → début d'émission : min 3.63, médiane 3.66, max 3.72 ms (34 mesures).
+Fin du balayage par rapport au départ de l'autre boîtier : de -8.9 à +1.5 ms (positif = le balayage a fini APRÈS le départ de l'autre sans le voir).
+Écarts de départ : de -5.2 à +4.6 ms.
