@@ -1,0 +1,245 @@
+[
+ {
+  "run": "a0-4KB-longfast",
+  "preset": "LONG_FAST",
+  "description": "4 KB photo, protocol pace (first real run with the radio journal)",
+  "frames_board1": 24,
+  "frames_board2": 3,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "a1-7.5KB-longfast",
+  "preset": "LONG_FAST",
+  "description": "7.5 KB transfer, protocol pace",
+  "frames_board1": 41,
+  "frames_board2": 4,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "a2-simultaneous-bursts-longfast",
+  "preset": "LONG_FAST",
+  "description": "worst case: both boards send a burst at the same time (10 and 6 frames of 219 B, no pause)",
+  "frames_board1": 11,
+  "frames_board2": 7,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "b4-7.5KB-longfast-v5",
+  "preset": "LONG_FAST",
+  "description": "7.5 KB transfer, protocol pace, firmware with control-frame priority",
+  "frames_board1": 41,
+  "frames_board2": 4,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "b5-7.5KB-longfast-cw2",
+  "preset": "LONG_FAST",
+  "description": "7.5 KB transfer, protocol pace, contention window +2 bits for data frames",
+  "frames_board1": 41,
+  "frames_board2": 4,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "b6-30KB-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "30,720 B transfer, protocol pace",
+  "frames_board1": 153,
+  "frames_board2": 7,
+  "strict_conflicts": 1,
+  "collisions": 0
+ },
+ {
+  "run": "c1a-priority-test-collision",
+  "preset": "LONG_FAST",
+  "description": "priority test, first attempt: a real collision (start gap 1.44 ms)",
+  "frames_board1": 9,
+  "frames_board2": 12,
+  "strict_conflicts": 3,
+  "collisions": 1
+ },
+ {
+  "run": "c1b-priority-on",
+  "preset": "LONG_FAST",
+  "description": "ready-to-receive frame with control priority, 4 data frames ahead of it",
+  "frames_board1": 7,
+  "frames_board2": 12,
+  "strict_conflicts": 1,
+  "collisions": 0
+ },
+ {
+  "run": "c1c-priority-off",
+  "preset": "LONG_FAST",
+  "description": "same without control priority, 1 data frame ahead",
+  "frames_board1": 8,
+  "frames_board2": 12,
+  "strict_conflicts": 0,
+  "collisions": 0
+ },
+ {
+  "run": "c1d-priority-test-collision",
+  "preset": "LONG_FAST",
+  "description": "priority test: a second real collision (start gap 7.8 ms)",
+  "frames_board1": 9,
+  "frames_board2": 16,
+  "strict_conflicts": 2,
+  "collisions": 1
+ },
+ {
+  "run": "c1e-priority-on-deep-queue",
+  "preset": "LONG_FAST",
+  "description": "priority on, 12-frame burst in the queue: ready frame left after 2.2 s with 11 frames ahead",
+  "frames_board1": 10,
+  "frames_board2": 18,
+  "strict_conflicts": 4,
+  "collisions": 2
+ },
+ {
+  "run": "c1f-priority-off-collision",
+  "preset": "LONG_FAST",
+  "description": "priority off, attempt hit by a collision (start gap 8.5 ms)",
+  "frames_board1": 9,
+  "frames_board2": 17,
+  "strict_conflicts": 1,
+  "collisions": 1
+ },
+ {
+  "run": "c1g-priority-off-deep-queue",
+  "preset": "LONG_FAST",
+  "description": "priority off, 12-frame burst: ready frame left after 15.6 s with 7 frames ahead",
+  "frames_board1": 9,
+  "frames_board2": 17,
+  "strict_conflicts": 1,
+  "collisions": 0
+ },
+ {
+  "run": "d1a-saturation-17B-longfast",
+  "preset": "LONG_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, no pause",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 18,
+  "collisions": 2
+ },
+ {
+  "run": "d1b-saturation-17B-longfast",
+  "preset": "LONG_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, no pause",
+  "frames_board1": 61,
+  "frames_board2": 60,
+  "strict_conflicts": 15,
+  "collisions": 1
+ },
+ {
+  "run": "d1c-saturation-17B-longfast",
+  "preset": "LONG_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, no pause",
+  "frames_board1": 60,
+  "frames_board2": 60,
+  "strict_conflicts": 21,
+  "collisions": 3
+ },
+ {
+  "run": "d2-saturation-219B-longfast",
+  "preset": "LONG_FAST",
+  "description": "symmetric saturation, 15 frames of 219 B per board, no pause",
+  "frames_board1": 16,
+  "frames_board2": 16,
+  "strict_conflicts": 1,
+  "collisions": 1
+ },
+ {
+  "run": "d3-saturation-17B-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 150 frames of 17 B per board, no pause",
+  "frames_board1": 151,
+  "frames_board2": 151,
+  "strict_conflicts": 232,
+  "collisions": 10
+ },
+ {
+  "run": "e01-window-plus0-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +0 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 102,
+  "collisions": 9
+ },
+ {
+  "run": "e02-window-plus0-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +0 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 113,
+  "collisions": 10
+ },
+ {
+  "run": "e03-window-plus0-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +0 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 99,
+  "collisions": 10
+ },
+ {
+  "run": "e11-window-plus1-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +1 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 95,
+  "collisions": 7
+ },
+ {
+  "run": "e12-window-plus1-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +1 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 100,
+  "collisions": 5
+ },
+ {
+  "run": "e13-window-plus1-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +1 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 91,
+  "collisions": 4
+ },
+ {
+  "run": "e21-window-plus2-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +2 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 69,
+  "collisions": 0
+ },
+ {
+  "run": "e22-window-plus2-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +2 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 55,
+  "collisions": 3
+ },
+ {
+  "run": "e23-window-plus2-bits-mediumfast",
+  "preset": "MEDIUM_FAST",
+  "description": "symmetric saturation, 60 frames of 17 B per board, contention window +2 bit(s) for data frames",
+  "frames_board1": 61,
+  "frames_board2": 61,
+  "strict_conflicts": 56,
+  "collisions": 1
+ }
+]

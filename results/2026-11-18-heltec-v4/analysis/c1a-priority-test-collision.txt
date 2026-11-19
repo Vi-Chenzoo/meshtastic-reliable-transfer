@@ -1,0 +1,30 @@
+== Boîtier A board-1 ==
+émissions : 9 (9 avec durée mesurée) ; temps d'émission mesuré 12159 ms, calculé (Semtech) 12159 ms, annoncé par le firmware 12155 ms ; écart mesuré/calculé +0.00 %
+écart par trame (mesuré − calculé) : 9 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 9 mesures, médiane 734.7, p95 3440.7, max 3440.7 ms
+émissions repoussées : radio en réception ×33, canal occupé (CAD) ×3
+pause entre deux émissions d'une même rafale : 3 mesures, médiane 1916.8, p95 4563.2, max 4563.2 ms
+reçus : 11 bons, 0 en erreur ; interruptions : 9 d'émission, 11 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 20.7 % d'une fenêtre de 58.6 s
+== Boîtier B board-2 ==
+émissions : 12 (12 avec durée mesurée) ; temps d'émission mesuré 18465 ms, calculé (Semtech) 18465 ms, annoncé par le firmware 18459 ms ; écart mesuré/calculé +0.00 %
+écart par trame (mesuré − calculé) : 12 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 12 mesures, médiane 7021.2, p95 18587.9, max 18587.9 ms
+émissions repoussées : radio en réception ×11, canal occupé (CAD) ×1
+pause entre deux émissions d'une même rafale : 9 mesures, médiane 356.5, p95 1853.3, max 1853.3 ms
+reçus : 8 bons, 0 en erreur ; interruptions : 12 d'émission, 8 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 30.4 % d'une fenêtre de 60.7 s
+
+== Calage des horloges == 19 paquets communs (deux sens), dérive -2.3 ppm, résidu médian 0.01 ms, max 0.07 ms, retard de traitement 7.00 ms
+== Trames A → B == 9 émises : 8 reçues, 1 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+   sourde : id 0x9540972a, recouvrement 558 ms (fin de la trame), le récepteur émettait 243 octets
+== Trames B → A == 12 émises : 11 reçues, 1 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+   sourde : id 0xc0b19972, recouvrement 558 ms (début de la trame), le récepteur émettait 42 octets
+== Réponses courtes de B pendant la rafale de A (BILAN, point d'étape…) ==
+   à 20.1 s : 27 octets, 436 ms d'antenne, attente avant départ 37 ms
+   à 29.5 s : 34 octets, 518 ms d'antenne, attente avant départ 520 ms
+== Réponses courtes de A pendant la rafale de B (BILAN, point d'étape…) ==
+   à 2.3 s : 42 octets, 559 ms d'antenne, attente avant départ 1835 ms
+   à 4.6 s : 24 octets, 436 ms d'antenne, attente avant départ 555 ms
+   à 9.6 s : 55 octets, 641 ms d'antenne, attente avant départ 3441 ms
+   à 21.6 s : 42 octets, 559 ms d'antenne, attente avant départ 213 ms

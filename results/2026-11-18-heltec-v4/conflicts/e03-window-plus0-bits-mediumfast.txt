@@ -1,0 +1,16 @@
+99 conflits (les deux boîtiers repartent dans la seconde qui suit une fin de trame), 10 collisions = 10.1 % ; émissions A 61, B 61 ; calage : 102 paquets, résidu max 0.05 ms
+   écart de départ 0 à 2 ms : 3 conflits, 3 collisions
+   écart de départ 2 à 5 ms : 6 conflits, 6 collisions
+   écart de départ 5 à 10 ms : 1 conflits, 1 collisions
+   écart de départ 100 à 300 ms : 39 conflits, 0 collisions
+   écart de départ 300 à 1000 ms : 50 conflits, 0 collisions
+   COLLISION à 2217.56 s (horloge de B) : départs à 3.86 ms l'un de l'autre, recouvrement 156 ms
+   COLLISION à 2219.54 s (horloge de B) : départs à 5.01 ms l'un de l'autre, recouvrement 155 ms
+   COLLISION à 2220.49 s (horloge de B) : départs à 0.65 ms l'un de l'autre, recouvrement 160 ms
+   COLLISION à 2221.52 s (horloge de B) : départs à 3.82 ms l'un de l'autre, recouvrement 156 ms
+   COLLISION à 2225.31 s (horloge de B) : départs à 1.00 ms l'un de l'autre, recouvrement 159 ms
+   COLLISION à 2227.81 s (horloge de B) : départs à 1.36 ms l'un de l'autre, recouvrement 159 ms
+   COLLISION à 2228.31 s (horloge de B) : départs à 4.49 ms l'un de l'autre, recouvrement 156 ms
+   COLLISION à 2230.06 s (horloge de B) : départs à 3.10 ms l'un de l'autre, recouvrement 157 ms
+   COLLISION à 2231.84 s (horloge de B) : départs à 4.30 ms l'un de l'autre, recouvrement 156 ms
+   COLLISION à 2240.60 s (horloge de B) : départs à 2.96 ms l'un de l'autre, recouvrement 157 ms

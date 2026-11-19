@@ -1,0 +1,22 @@
+== Boîtier A board-1 ==
+émissions : 11 (11 avec durée mesurée) ; temps d'émission mesuré 21387 ms, calculé (Semtech) 21387 ms, annoncé par le firmware 21381 ms ; écart mesuré/calculé +0.00 %
+écart par trame (mesuré − calculé) : 11 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 11 mesures, médiane 25522.1, p95 37731.3, max 37731.3 ms
+émissions repoussées : radio en réception ×67, canal occupé (CAD) ×3
+pause entre deux émissions d'une même rafale : 9 mesures, médiane 1536.5, p95 2900.8, max 2900.8 ms
+reçus : 7 bons, 0 en erreur ; interruptions : 11 d'émission, 7 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 51.4 % d'une fenêtre de 41.6 s
+== Boîtier B board-2 ==
+émissions : 7 (7 avec durée mesurée) ; temps d'émission mesuré 13130 ms, calculé (Semtech) 13130 ms, annoncé par le firmware 13125 ms ; écart mesuré/calculé +0.00 %
+écart par trame (mesuré − calculé) : 7 mesures, médiane 0.0, p95 0.0, max 0.0 ms
+attente entre la mise en file et le début d'émission : 7 mesures, médiane 13083.7, p95 22706.9, max 22706.9 ms
+émissions repoussées : radio en réception ×56, canal occupé (CAD) ×2
+pause entre deux émissions d'une même rafale : 6 mesures, médiane 2420.0, p95 2944.5, max 2944.5 ms
+reçus : 11 bons, 0 en erreur ; interruptions : 7 d'émission, 11 de réception (0 vues par la scrutation)
+temps passé à émettre (donc sourd) : 33.2 % d'une fenêtre de 39.5 s
+
+== Calage des horloges == 18 paquets communs (deux sens), dérive -0.4 ppm, résidu médian 0.01 ms, max 0.03 ms, retard de traitement 6.97 ms
+== Trames A → B == 11 émises : 11 reçues, 0 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+== Trames B → A == 7 émises : 7 reçues, 0 perdues par surdité (le récepteur émettait), 0 abîmées, 0 perdues sans cause vue
+== Réponses courtes de B pendant la rafale de A (BILAN, point d'étape…) ==
+   à 27.4 s : 57 octets, 682 ms d'antenne, attente avant départ 19015 ms

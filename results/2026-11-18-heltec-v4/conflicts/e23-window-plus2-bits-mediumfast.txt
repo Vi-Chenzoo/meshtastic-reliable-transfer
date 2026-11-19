@@ -1,0 +1,5 @@
+56 conflits (les deux boîtiers repartent dans la seconde qui suit une fin de trame), 1 collisions = 1.8 % ; émissions A 61, B 61 ; calage : 120 paquets, résidu max 0.06 ms
+   écart de départ 0 à 2 ms : 1 conflits, 1 collisions
+   écart de départ 100 à 300 ms : 13 conflits, 0 collisions
+   écart de départ 300 à 1000 ms : 42 conflits, 0 collisions
+   COLLISION à 2880.86 s (horloge de B) : départs à 0.38 ms l'un de l'autre, recouvrement 160 ms
